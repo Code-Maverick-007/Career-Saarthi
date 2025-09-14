@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Saarthi - AI Advisor</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #13a4ec;
+            --secondary-color: #0d171b;
+            --accent-color: #4c809a;
+            --background-color: #ffffff;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .active-link {
+            color: var(--primary-color);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen flex flex-col" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- Mobile Sidebar Menu -->
+<aside id="mobile-menu" class="mobile-menu fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
+    <div class="p-4 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+        <button id="close-menu" class="absolute right-4 top-4 text-gray-500 hover:text-gray-700">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="p-4 space-y-2">
+        <a href="student_home_screen.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">home</span>
+            <span>Home</span>
+        </a>
+        <a href="college_search.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">school</span>
+            <span>Colleges</span>
+        </a>
+        <a href="student_career_explorer.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">work</span>
+            <span>Careers</span>
+        </a>
+        <a href="student_ai_advisor.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100 active-link">
+            <span class="material-symbols-outlined align-middle mr-2">smart_toy</span>
+            <span>AI Advisor</span>
+        </a>
+        <a href="student_dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">bar_chart_4_bars</span>
+            <span>Dashboard</span>
+        </a>
+    </nav>
+</aside>
+
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-white/80 backdrop-blur-sm border-b border-gray-200">
+    <div class="flex items-center p-4">
+        <button id="mobile-menu-button" class="p-2 -ml-2 md:hidden">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+        <h2 class="flex-1 text-center text-lg font-bold text-gray-900 md:text-xl">AI Advisor</h2>
+        <div class="w-10"></div> <!-- Spacer for alignment -->
+    </div>
+</header>
+<main id="main-content" class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="text-center">
+<p class="text-gray-600 text-lg leading-normal">Ask me anything about colleges, careers, and more.</p>
+</div>
+<div class="flex gap-2 flex-wrap justify-center">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-sky-100/70 text-sky-800 px-4 text-sm font-medium">What are the best colleges for computer science?</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-sky-100/70 text-sky-800 px-4 text-sm font-medium">How can I improve my college application?</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-sky-100/70 text-sky-800 px-4 text-sm font-medium">What career options are available?</button>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-white shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0CKb8p9nCPORehu3vmIiRfHnIGzY7bWcO2DqfpfbSNsxT4Uo9eW_cGWVGvGT_7dyckQedyU3ikmomDMoE9M11JEokTjPAi4iQju6E8V0ypGrLqjM3po2lt4dhByYW9hx8STE16vwBa5buLzn9rp7X1yJuCEEWY-WsAJLciLBJ_0qTSOffjpiRdjymgtArd4XLC3Ix3VVbL_l6WNwBC4EdJAGdIiGlXAD2eI4imTpBUw4_OOiUCmt9Os6uVrDXokb2NO79AJ-eAsoo");'></div>
+<div class="flex flex-1 flex-col gap-1.5 items-start">
+<p class="text-gray-700 text-sm font-medium">AI Advisor</p>
+<div class="text-base font-normal leading-relaxed flex max-w-xs rounded-2xl rounded-tl-none px-4 py-3 bg-gray-100 text-gray-800">Hello! I'm here to help you with any questions you have about colleges, careers, and more. Feel free to ask me anything!</div>
+</div>
+</div>
+</main>
+
+<footer class="border-t border-gray-200 bg-white py-3">
+    <!-- Input area -->
+    <div class="flex items-center px-4 py-2 gap-3">
+        <div class="flex w-full flex-1 items-stretch rounded-full h-12 bg-gray-100">
+            <input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-gray-900 focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-gray-500 px-5 text-base font-normal" 
+                   placeholder="Ask me anything..." 
+                   value=""
+                   id="ai-query-input"/>
+            <button class="flex items-center justify-center px-4">
+                <span class="material-symbols-outlined text-gray-500">add_photo_alternate</span>
+            </button>
+            <button class="flex items-center justify-center rounded-full bg-[var(--primary-color)] text-white w-10 h-10 my-1 mr-1.5" id="send-query">
+                <span class="material-symbols-outlined">send</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="flex justify-around border-t border-gray-200 pt-2 pb-safe">
+        <a href="student_home_screen.html" class="flex flex-col items-center gap-1 text-gray-500 nav-link" data-page="home">
+            <span class="material-symbols-outlined">home</span>
+            <p class="text-xs font-medium">Home</p>
+        </a>
+        <a href="college_search.html" class="flex flex-col items-center gap-1 text-gray-500 nav-link" data-page="colleges">
+            <span class="material-symbols-outlined">school</span>
+            <p class="text-xs font-medium">Colleges</p>
+        </a>
+        <a href="student_career_explorer.html" class="flex flex-col items-center gap-1 text-gray-500 nav-link" data-page="careers">
+            <span class="material-symbols-outlined">work</span>
+            <p class="text-xs font-medium">Careers</p>
+        </a>
+        <a href="student_ai_advisor.html" class="flex flex-col items-center gap-1 text-[var(--primary-color)] nav-link" data-page="ai">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p class="text-xs font-bold">AI Advisor</p>
+        </a>
+        <a href="student_dashboard.html" class="flex flex-col items-center gap-1 text-gray-500 nav-link" data-page="dashboard">
+            <span class="material-symbols-outlined">bar_chart_4_bars</span>
+            <p class="text-xs font-medium">Dashboard</p>
+        </a>
+    </nav>
+    <div class="h-safe-area-bottom"></div>
+</footer>
+
+<!-- SPA Navigation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu');
+        const sendButton = document.getElementById('send-query');
+        const aiInput = document.getElementById('ai-query-input');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuOverlay.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        if (mobileMenuButton) mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        if (closeMenuButton) closeMenuButton.addEventListener('click', toggleMobileMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+        // Handle send button click
+        if (sendButton && aiInput) {
+            function sendQuery() {
+                const query = aiInput.value.trim();
+                if (query) {
+                    // Here you would typically send the query to your AI service
+                    console.log('Sending query:', query);
+                    
+                    // Add user message to chat
+                    addMessage('user', query);
+                    
+                    // Simulate AI response (replace with actual API call)
+                    setTimeout(() => {
+                        addMessage('ai', 'I received your question: ' + query);
+                    }, 1000);
+                    
+                    // Clear input
+                    aiInput.value = '';
+                }
+            }
+            
+            sendButton.addEventListener('click', sendQuery);
+            
+            // Handle Enter key
+            aiInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendQuery();
+                }
+            });
+        }
+        
+        function addMessage(role, content) {
+            const messagesContainer = document.querySelector('#main-content');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex items-start gap-3 ${role === 'ai' ? 'mb-6' : 'mb-4'}`;
+            
+            if (role === 'ai') {
+                messageDiv.innerHTML = `
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-white shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0CKb8p9nCPORehu3vmIiRfHnIGzY7bWcO2DqfpfbSNsxT4Uo9eW_cGWVGvGT_7dyckQedyU3ikmomDMoE9M11JEokTjPAi4iQju6E8V0ypGrLqjM3po2lt4dhByYW9hx8STE16vwBa5buLzn9rp7X1yJuCEEWY-WsAJLciLBJ_0qTSOffjpiRdjymgtArd4XLC3Ix3VVbL_l6WNwBC4EdJAGdIiGlXAD2eI4imTpBUw4_OOiUCmt9Os6uVrDXokb2NO79AJ-eAsoo");'></div>
+                    <div class="flex-1">
+                        <p class="text-gray-700 text-sm font-medium">AI Advisor</p>
+                        <div class="text-base font-normal leading-relaxed flex max-w-xs rounded-2xl rounded-tl-none px-4 py-3 bg-gray-100 text-gray-800">${content}</div>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="ml-auto max-w-xs">
+                        <div class="text-base font-normal leading-relaxed rounded-2xl rounded-tr-none px-4 py-3 bg-blue-100 text-blue-900">${content}</div>
+                    </div>
+                `;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // SPA Navigation
+        const mainContent = document.getElementById('main-content');
+        const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+        let isLoading = false;
+
+        async function loadPage(url, pushState = true) {
+            if (isLoading) return;
+            
+            try {
+                isLoading = true;
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Page not found');
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Update main content
+                const newContent = doc.querySelector('#main-content').innerHTML;
+                mainContent.innerHTML = newContent;
+                
+                // Update page title
+                document.title = doc.title;
+                
+                // Update URL and history
+                if (pushState) {
+                    window.history.pushState({ url }, '', url);
+                }
+                
+                // Update active link
+                updateActiveLink(url);
+                
+                // Close mobile menu if open
+                if (mobileMenu && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu();
+                }
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+            } catch (error) {
+                console.error('Error loading page:', error);
+                // Fallback to traditional navigation
+                window.location.href = url;
+            } finally {
+                isLoading = false;
+            }
+        }
+
+        function updateActiveLink(url) {
+            // Remove active class from all links
+            document.querySelectorAll('.nav-link, #mobile-menu a').forEach(link => {
+                link.classList.remove('active-link', 'text-[var(--primary-color)]');
+                link.classList.add('text-gray-500');
+            });
+            
+            // Add active class to current page link
+            const currentPage = url.split('/').pop() || 'student_home_screen.html';
+            document.querySelectorAll(`a[href*="${currentPage}"]`).forEach(link => {
+                link.classList.add('active-link', 'text-[var(--primary-color)]');
+                link.classList.remove('text-gray-500');
+            });
+        }
+
+        // Handle navigation link clicks
+        function handleNavigation(e) {
+            const link = e.currentTarget;
+            const url = link.getAttribute('href');
+            
+            // Skip if it's an external link or anchor link
+            if (url.startsWith('http') || url.startsWith('#')) return;
+            
+            e.preventDefault();
+            loadPage(url);
+        }
+
+        // Add click event listeners to all navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavigation);
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            if (e.state && e.state.url) {
+                loadPage(e.state.url, false);
+            }
+        });
+
+        // Initialize active link
+        updateActiveLink(window.location.pathname);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>CareerSaarthi Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/shared.js" defer></script>
+    <script src="js/api.js" defer></script>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .active-tab {
+            border-bottom: 3px solid;
+        }
+        .tab-student { border-color: #3b82f6; color: #3b82f6; }
+        .tab-counselor { border-color: #10b981; color: #10b981; }
+        .tab-college { border-color: #8b5cf6; color: #8b5cf6; }
+        .tab-admin { border-color: #f97316; color: #f97316; }
+        .btn-student { background-color: #3b82f6; }
+        .btn-counselor { background-color: #10b981; }
+        .btn-college { background-color: #8b5cf6; }
+        .btn-admin { background-color: #f97316; }
+        .outline-student { border-color: #3b82f6; color: #3b82f6; }
+        .outline-counselor { border-color: #10b981; color: #10b981; }
+        .outline-college { border-color: #8b5cf6; color: #8b5cf6; }
+        .outline-admin { border-color: #f97316; color: #f97316; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+<div class="w-full max-w-sm p-6" id="login-container">
+<div class="text-center mb-8">
+<img alt="CareerSaarthi Logo" class="h-12 mx-auto mb-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApCn_bLUsAEA2lnUxPlpjUFBN5aMJRZRPUP3cydxQF__f4gaJocwk9J8SMtg9mrX5mcbtMYsdZPWBF1e0NUImKEwHayvLV6fPznioKvZe1xOIL1btDs0gqFh7Qy1NO2M8uLGyOoC_u5_70O1wXDS3KQX0xMDfuaDdUkRko7XihEcILCPBCVoc6WxHV2-hnVqn3m_F3reYr9VkS9rZCuIoRREizsn5pcs6HNH9wjN4CpJDBgS--5H5gDahjnQ67cOFL0t03JJcNFiWg"/>
+<h1 class="text-xl font-semibold text-gray-800">CareerSaarthi</h1>
+<p class="text-gray-500 mt-1">Discover Your Career Path with AI + Counselors</p>
+</div>
+<div class="mb-6">
+<div class="flex border-b">
+<button class="flex-1 py-3 text-sm font-medium text-gray-500" data-role="student">Student</button>
+<button class="flex-1 py-3 text-sm font-medium text-gray-500" data-role="counselor">Counselor</button>
+<button class="flex-1 py-3 text-sm font-medium text-gray-500" data-role="college">College</button>
+<button class="flex-1 py-3 text-sm font-medium text-gray-500" data-role="admin">Admin</button>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-md">
+<div class="text-center mb-6" id="role-specific-content">
+</div>
+<form>
+<div class="mb-4">
+<label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email/Username</label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" placeholder="Enter your email or username" type="text"/>
+</div>
+<div class="mb-6">
+<label class="block text-sm font-medium text-gray-700 mb-1" for="password">Password</label>
+<input class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="password" placeholder="Enter your password" type="password"/>
+</div>
+<button class="w-full text-white font-semibold py-3 rounded-lg transition-colors" id="login-btn" type="submit">Login</button>
+<button class="w-full mt-4 font-semibold py-3 rounded-lg border-2 transition-colors flex items-center justify-center" id="google-btn" type="button">
+<img alt="Google icon" class="mr-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG9M9QvIyq_55KAmAiu2TFBN5LcrGk6RiuV5tTRlC0U8qpT_QWZ-NAkiF_kOLJaGjo0_aU7NjcYsWwPU_pUbGRPnJ5yT8AUvojn7HkG1c4Go6-b77ymwI_KAFqdzKQ2YU8Bk1FKnyP8ymOrSoOEsaQG0x4lXqx3lxauYk-lFJWHfOPf9ZIqU_92J14HaWhaEBTYzM5p-DGPHfjR1GFErh_QT2mFefX9Ngcp_A_qhrzMivopOSgHk-_pedXq8Zr1bDIUdGJnBOlLRZM"/> Continue with Google
+                </button>
+<div class="text-center mt-4">
+    <button type="button" id="demo-login" class="text-sm text-gray-500 hover:underline focus:outline-none">Demo Login</button>
+</div>
+</form>
+</div>
+<div class="text-center mt-8">
+<p class="text-gray-600">Don’t have an account? <a class="font-semibold text-blue-500 hover:underline" href="#">Sign Up</a></p>
+</div>
+</div>
+<script>
+        // Current selected role
+        let currentRole = 'student';
+        
+        // Demo credentials for different roles
+        const demoCredentials = {
+            student: { email: 'student@demo.com', password: 'student123' },
+            counselor: { email: 'counselor@demo.com', password: 'counselor123' },
+            college: { email: 'college@demo.com', password: 'college123' },
+            admin: { email: 'admin@demo.com', password: 'admin123' }
+        };
+
+        const roleData = {
+            student: {
+                icon: 'school',
+                text: 'Explore colleges, scholarships & AI advisor',
+                colorClass: 'student',
+                tabColor: 'tab-student',
+                btnColor: 'btn-student',
+                outlineColor: 'outline-student',
+                ringColor: 'focus:ring-blue-500'
+            },
+            counselor: {
+                icon: 'headset_mic',
+                text: 'Guide students with AI co-pilot & resources',
+                colorClass: 'counselor',
+                tabColor: 'tab-counselor',
+                btnColor: 'btn-counselor',
+                outlineColor: 'outline-counselor',
+                ringColor: 'focus:ring-green-500'
+            },
+            college: {
+                icon: 'apartment',
+                text: 'Manage profile, events & analytics',
+                colorClass: 'college',
+                tabColor: 'tab-college',
+                btnColor: 'btn-college',
+                outlineColor: 'outline-college',
+                ringColor: 'focus:ring-purple-500'
+            },
+            admin: {
+                icon: 'shield',
+                text: 'Control users, scholarships & nationwide reports',
+                colorClass: 'admin',
+                tabColor: 'tab-admin',
+                btnColor: 'btn-admin',
+                outlineColor: 'outline-admin',
+                ringColor: 'focus:ring-orange-500'
+            }
+        };
+        const tabs = document.querySelectorAll('[data-role]');
+        const roleSpecificContent = document.getElementById('role-specific-content');
+        const loginBtn = document.getElementById('login-btn');
+        const googleBtn = document.getElementById('google-btn');
+        const inputs = document.querySelectorAll('input');
+        function updateRole(role) {
+            const data = roleData[role];
+            // Update role-specific content
+            roleSpecificContent.innerHTML = `
+                <span class="material-icons text-4xl text-${data.colorClass === 'student' ? 'blue' : data.colorClass === 'counselor' ? 'green' : data.colorClass === 'college' ? 'purple' : 'orange'}-500">${data.icon}</span>
+                <p class="text-sm text-gray-500 mt-2">${data.text}</p>
+            `;
+            // Update tab styles
+            tabs.forEach(t => {
+                t.classList.remove('active-tab', 'tab-student', 'tab-counselor', 'tab-college', 'tab-admin');
+                if (t.dataset.role === role) {
+                    t.classList.add('active-tab', data.tabColor);
+                }
+            });
+            // Update button colors
+            loginBtn.className = `w-full text-white font-semibold py-3 rounded-lg transition-colors ${data.btnColor}`;
+            googleBtn.className = `w-full mt-4 font-semibold py-3 rounded-lg border-2 transition-colors flex items-center justify-center ${data.outlineColor}`;
+            // Update input focus ring color
+            inputs.forEach(input => {
+                input.classList.remove('focus:ring-blue-500', 'focus:ring-green-500', 'focus:ring-purple-500', 'focus:ring-orange-500');
+                input.classList.add(data.ringColor);
+            });
+        }
+        // Update role on tab click
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                currentRole = tab.dataset.role;
+                updateRole(currentRole);
+            });
+        });
+
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple validation
+            if (!email || !password) {
+                showAlert('Please enter both email and password', 'error');
+                return;
+            }
+            
+            try {
+                const response = await ApiService.login(email, password);
+                
+                if (response.success) {
+                    // Save token and user data
+                    localStorage.setItem('authToken', response.token);
+                    localStorage.setItem('userRole', response.user.role);
+                    localStorage.setItem('userData', JSON.stringify(response.user));
+                    
+                    showAlert('Login successful! Redirecting...', 'success');
+                    
+                    // Redirect based on user role
+                    setTimeout(() => {
+                        window.CareerSaarthi.Navigation.redirectByRole(response.user.role);
+                    }, 1000);
+                } else {
+                    showAlert(response.message || 'Invalid credentials. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                showAlert('An error occurred during login. Please try again.', 'error');
+            }
+        });
+
+        // Demo login handler
+        document.getElementById('demo-login').addEventListener('click', function() {
+            const demo = demoCredentials[currentRole];
+            if (!demo) return;
+            
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            
+            emailInput.value = demo.email;
+            passwordInput.value = demo.password;
+            
+            // Trigger input events for any validation
+            emailInput.dispatchEvent(new Event('input'));
+            passwordInput.dispatchEvent(new Event('input'));
+            
+            // Auto-submit the form after a short delay
+            setTimeout(() => {
+                document.querySelector('form').dispatchEvent(new Event('submit'));
+            }, 300);
+        });
+
+        // Show alert message
+        function showAlert(message, type = 'info') {
+            // Remove any existing alerts
+            const existingAlert = document.querySelector('.alert-message');
+            if (existingAlert) {
+                existingAlert.remove();
+            }
+
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert-message fixed top-4 right-4 p-4 rounded-lg shadow-lg ${
+                type === 'error' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'
+            }`;
+            alertDiv.textContent = message;
+            document.body.appendChild(alertDiv);
+
+            // Auto-remove after 3 seconds
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 3000);
+        }
+
+        // Initial state
+        updateRole('student');
+    </script>
+
+</body></html>

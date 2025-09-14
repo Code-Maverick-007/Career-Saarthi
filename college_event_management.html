@@ -1,0 +1,122 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>college_event_management</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="flex flex-col">
+<header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+<div class="flex items-center p-4 pb-3">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-[#0d171b]">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-xl font-bold tracking-tight text-[#0d171b]">Events</h1>
+<div class="w-10"></div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="p-4">
+<h2 class="text-lg font-bold leading-tight tracking-tight text-[#0d171b] pb-3">Create Event</h2>
+<form class="space-y-4">
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-title">Event Title</label>
+<input class="form-input w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] placeholder:text-slate-400 focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-title" placeholder="Enter event title" type="text"/>
+</div>
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-description">Event Description</label>
+<textarea class="form-textarea w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] placeholder:text-slate-400 focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-description" placeholder="Enter event description" rows="3"></textarea>
+</div>
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-type">Event Type</label>
+<div class="relative">
+<select class="form-select w-full appearance-none rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-type">
+<option value="">Select event type</option>
+<option value="webinar">Webinar</option>
+<option value="admission">Admission Notice</option>
+<option value="hackathon">Hackathon</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-date">Event Date</label>
+<input class="form-input w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] placeholder:text-slate-400 focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-date" placeholder="Select date" type="date"/>
+</div>
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-time">Event Time</label>
+<input class="form-input w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] placeholder:text-slate-400 focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-time" placeholder="Select time" type="time"/>
+</div>
+</div>
+<div>
+<label class="text-sm font-medium text-[#0d171b] pb-1.5 block" for="event-location">Event Location</label>
+<input class="form-input w-full rounded-lg border-slate-300 bg-white px-4 py-3 text-base text-[#0d171b] placeholder:text-slate-400 focus:border-[#13a4ec] focus:ring-[#13a4ec]" id="event-location" placeholder="Enter location" type="text"/>
+</div>
+<div class="pt-2">
+<button class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-[#13a4ec] px-4 py-3 text-base font-bold text-white shadow-sm transition-colors hover:bg-[#13a4ec]/90" type="submit">Create Event</button>
+</div>
+</form>
+</section>
+<section class="p-4 pt-6">
+<h2 class="text-lg font-bold leading-tight tracking-tight text-[#0d171b] pb-3">Upcoming Events</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4 rounded-lg bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-medium uppercase tracking-wider text-[#4c809a]">Webinar</p>
+<h3 class="text-base font-bold text-[#0d171b] pt-1">Career Guidance Webinar</h3>
+<p class="text-sm text-slate-500 pt-1">Join us for an insightful webinar on career planning.</p>
+<button class="mt-3 flex items-center justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-[#0d171b] hover:bg-slate-200">View</button>
+</div>
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACWsrsj9njCBJ71NbBIPQM1ObmPvzwK9NVI3Nq4n1FYwbgBogVON8-BSQ8GAm1DnUT7pBljs-8zQJeIjqe6epxfWRc5TtW64dcwYOe03aIuBTMyBjYr7HpNtn6iLN_Z53dSJG_1RbrRP_gJTvuTa9XusZKyqLzU4xNRgPmMAhYgVTESoBaHI_XLTV7XGiodntWM_uj95XzWCYWCjq2KYIkCpbRDGwJwpDAazR2ceZA16_iqfnAsvNGiCddvlbyZnc7TDNdc1-1ceVT");'></div>
+</div>
+<div class="flex items-start gap-4 rounded-lg bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-medium uppercase tracking-wider text-[#4c809a]">Admission Notice</p>
+<h3 class="text-base font-bold text-[#0d171b] pt-1">Fall 2024 Admissions Open</h3>
+<p class="text-sm text-slate-500 pt-1">Apply now for the Fall 2024 semester.</p>
+<button class="mt-3 flex items-center justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-[#0d171b] hover:bg-slate-200">Apply</button>
+</div>
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHhrlVvOQYmrSjC2xAgXEfm1qpvn3m2Dl3StpBtftH0OhSIAkwo-yeSeHvxesLDyTnDPhDie3MTcHVXE021JZQcGtR1PvzV1HffERE9vEthbs--2MsN-Z-JJLX47g_hRADmx41paTnIJL584m9CbbCuLe203zAPvnzMrQRFH0cvnCqMIS1c14WDBUiU00uiyckeVTJ_dBCbwB_j4Mgl36-6LeGOjezCZWkb7Gu8UYRV67ZAbBXcuA36tvGSRVcy-6Q-XguhQz_oCsr");'></div>
+</div>
+<div class="flex items-start gap-4 rounded-lg bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-medium uppercase tracking-wider text-[#4c809a]">Hackathon</p>
+<h3 class="text-base font-bold text-[#0d171b] pt-1">Annual Tech Hackathon</h3>
+<p class="text-sm text-slate-500 pt-1">Participate in our annual hackathon and showcase your skills.</p>
+<button class="mt-3 flex items-center justify-center rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-[#0d171b] hover:bg-slate-200">Register</button>
+</div>
+<div class="h-24 w-24 flex-shrink-0 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjCIKl_BonyOZIn90tEL70xphWqu8qUG4WumJQf-meC4L_Bxp5B-P6kIjwu1y2K6wksH0iQbKwQWS7ndMkomtIRiSDPzz_f7av3tZQxgiv6hmK_2rNkkw_sgkje76U4DdkZsox2C78L6WZc9QoMw1Bee6wIbZf5yFNvPfVm8lybD-CuEbIM94tHt_D4By9529nF3FXcyT5doF9XwaPcc5avjQNqw9nqlbpENgLKwnUKjbt7WYdYlFcGZclW8EVJ4Cn26OcXsv3Djjk");'></div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-slate-200 bg-slate-50/80 backdrop-blur-sm">
+<nav class="flex justify-around px-4 pb-2 pt-2">
+<a class="flex flex-col items-center justify-end gap-1 text-[#4c809a] transition-colors hover:text-[#13a4ec]" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 rounded-full text-[#13a4ec]" href="#">
+<span class="material-symbols-outlined text-2xl">event</span>
+<p class="text-xs font-bold">Events</p>
+</a>
+<a class="flex flex-col items-center justify-end gap-1 text-[#4c809a] transition-colors hover:text-[#13a4ec]" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

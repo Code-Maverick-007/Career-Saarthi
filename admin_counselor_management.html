@@ -1,0 +1,111 @@
+<html><head>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<title>admin_counselor_management</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #4c809a;
+        --background-color: #f8fafc;
+        --text-primary: #0d171b;
+        --text-secondary: #4c809a;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #e7eff3;
+        border-radius: 2px;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="flex h-screen flex-col">
+<header class="sticky top-0 z-10 bg-white shadow-sm">
+<div class="flex items-center p-4">
+<button class="text-[var(--text-primary)]">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-[var(--text-primary)]">Counselors</h1>
+<div class="w-8"></div>
+</div>
+<div class="border-b border-gray-200">
+<nav class="-mb-px flex justify-around">
+<a class="w-1/2 border-b-2 border-[var(--primary-color)] py-4 px-1 text-center text-sm font-medium text-[var(--primary-color)]" href="#"> Applications </a>
+<a class="w-1/2 border-b-2 border-transparent py-4 px-1 text-center text-sm font-medium text-[var(--text-secondary)] hover:border-gray-300 hover:text-gray-700" href="#"> Counselors </a>
+</nav>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto custom-scrollbar">
+<div class="divide-y divide-gray-200">
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. Emily Carter" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Ip_zhBjcVH0-gdBPjpestdQNJknKJM9Gjk2vte1HSKA7h5_DMbnKey1TevNknDK3T5ZAUWasBIr8niSQSs0tw7zYEU97OhM9BX82vxtb8FpwB0_8nfWitJVxhC2bDrAbuSwr3vm6Dgaprp-kA4WWSqBLmXt7omFss5wXuDNc5eFfAimPeG1uQNw1Ew2FschKnu55lcd4bR8v3jyCukTTG8D_SuWyOP3UWbKgFqWuejEix0MgBOLUH6OxXuMbUhYjWu2vt12wszz5"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. Emily Carter</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 12/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. Benjamin Lee" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF0zZH_BXyw8OCV-t9xZwYwq_0o1j0bt5a9VwVgOwPL4w5-0Fql-yH-fKXq10PsBXSPm1bXS_12eBIdk8E7W6b9I4tX_IEeyBmkEjesTPyJvDYuL0DII3ip1mO6MZNllM8-BF4u00nW6FapxjT2ETLwPBrgFWfplM0EY4AELxoB1rITeONde9u7BusjJvUhd7XKNI4rRRIAQXoVg-8BoGdXtSkUxiU2-cOaN1uLRbnGcW1ui-eCt2pEzxUGr6MrUIcKbar7UTycX8M"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. Benjamin Lee</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 11/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. Olivia Chen" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3vV9RbdXr7nSBzEqvXCOr51J4rfVPzROMBFCwpMqsTBgN7AZAO1OjTlpodKavnROuxIjARESaYlhK4gav-ciJor3JoLRSnLgThHUaajPSNCqq4nqsyWM7ogaF7XIMij299nmNk-QNhcBUt4ysu4-im-7S38h_g9gbC-X6C____OIFs4r1iCUZQ93Fyo9kLz_qn4P_yZMcDC8JSPwENzaldjVsc92pxkXT5LO0Fk04D4TR4D5BFqEWxPy21ngaj4tHhHih0m_MLLbV"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. Olivia Chen</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 10/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. Samuel Jones" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJr2BCKXh2M_oeKcqSlE6Bm_U_NgtZ9cVrNBITYzXHb46brc1XWS3znzi4YlJI6EXl2ReidZTEcsqgcbRsElqoXEhXuyrnJvrZyttsso60Uf_ZchiQwJqbncCu3UsJQh92p9Kexh5e04PDVwGuZxORoV8vSQYpGUSoaLVeVrB6uc920m0LnK0Vsj9_Axyt049wgkumZxSyzI-7fbPUVPRm2drAkAMx5GmsTOraLImKKUW2XAT1E2__KJ-DAqb5wR-q8PxagpcehCXN"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. Samuel Jones</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 09/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. Isabella Rodriguez" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs9HScfqto69rFg9WDlpkoZdl6LWhjFcwSHI-3vkQJZU8cB80yIdNj8mqQb0Q4HvIfYm5QTPZjZ3k0nZurfFKXGVasCWxSn3NDnqHWkVuqj3_GFBgKgh7hRcNqtNEkwQtpzO-erZnPgJ1JEj6pPz8CbBmupbwKF4ZJitKrP2UD2YBSZiuhaQos5BFbvd_QnpqR3SS9wr3q368xSu5iLVK35cSvv5BPHbGV216wRKbf5Xg40r2OXucLBq4bNUb_CGiK0cdSE1CiaSLz"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. Isabella Rodriguez</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 08/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+<div class="flex cursor-pointer items-center gap-4 bg-white p-4 transition-colors hover:bg-gray-50">
+<img alt="Dr. David Williams" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuWEvptDyU_lfFDzyPmiB_nwGJw9Ba8NNhS9FdcpIfOrPwiWK69DGzcsfo5Odzy3Q4e4oVpsB3QkQQnyLlQd-YO1qkzqXrY1lY2anjvX1ndgF6TgwRepb2yiZKqZayQx5GTUU78n61ENbtq2c51eD9HyaliRPEkNfeGMY9rAw_51_TOy3z2IAKH8wbdS2iifiqgs9NRaS1Kf5ObINCB-qXnqE7SAge6Fb3sR8YCRMr5HprHjSWPJnoPH-lwcWEx6bk5Ul5sM_rJY4C"/>
+<div class="flex-1">
+<p class="font-semibold text-[var(--text-primary)]">Dr. David Williams</p>
+<p class="text-sm text-[var(--text-secondary)]">Applied on 07/03/2024</p>
+</div>
+<span class="material-symbols-outlined text-[var(--text-secondary)]"> chevron_right </span>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 border-t border-gray-200 bg-white/80 p-4 backdrop-blur-sm">
+<div class="flex gap-3">
+<button class="flex-1 rounded-xl bg-gray-200 py-3 text-sm font-bold text-[var(--text-primary)] transition-colors hover:bg-gray-300"> Deny </button>
+<button class="flex-1 rounded-xl bg-[var(--primary-color)] py-3 text-sm font-bold text-white transition-colors hover:bg-sky-500"> Approve </button>
+</div>
+</footer>
+</div>
+
+</body></html>

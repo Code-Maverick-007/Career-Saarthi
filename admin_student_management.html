@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>admin_student_management</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #0ea5e9;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+        --primary-950: #082f49;
+        --secondary-50: #f8fafc;
+        --secondary-100: #f1f5f9;
+        --secondary-200: #e2e8f0;
+        --secondary-300: #cbd5e1;
+        --secondary-400: #94a3b8;
+        --secondary-500: #64748b;
+        --secondary-600: #475569;
+        --secondary-700: #334155;
+        --secondary-800: #1e293b;
+        --secondary-900: #0f172a;
+        --secondary-950: #020617;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-secondary-50" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="flex h-screen flex-col">
+<header class="sticky top-0 z-10 bg-secondary-50 shadow-sm">
+<div class="mx-auto flex max-w-7xl items-center justify-between p-4">
+<button class="text-secondary-700">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="text-lg font-bold text-secondary-900">Students</h1>
+<div class="w-8"></div>
+</div>
+<div class="px-4 pb-3 pt-2">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-secondary-500"> search </span>
+</div>
+<input class="block w-full rounded-lg border-secondary-300 bg-secondary-100 py-3 pl-10 pr-4 text-secondary-900 placeholder:text-secondary-500 focus:border-primary-500 focus:ring-primary-500" placeholder="Search students..." type="text"/>
+</div>
+</div>
+<div class="border-b border-secondary-200">
+<nav class="-mb-px flex space-x-6 px-4">
+<a class="shrink-0 border-b-2 border-primary-500 px-1 py-3 text-sm font-semibold text-primary-600" href="#">All</a>
+<a class="shrink-0 border-b-2 border-transparent px-1 py-3 text-sm font-semibold text-secondary-500 hover:border-secondary-300 hover:text-secondary-700" href="#">Active</a>
+<a class="shrink-0 border-b-2 border-transparent px-1 py-3 text-sm font-semibold text-secondary-500 hover:border-secondary-300 hover:text-secondary-700" href="#">Banned</a>
+</nav>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<ul class="divide-y divide-secondary-200" role="list">
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Ethan Harper" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBto72U0MrKzKXj84IB7ZWuurQP-lXLnZaFuwsuh4gmzQrmLrIbL_T_Mxqg4gxgp1MnMirG7cZLMbOx6o8sIN49Rn2-RQQXQG1mlEhyVBeiWHbEor6hdlMz42PlN2iXokquAS9YAN30cepzwv5qxbVGFeklIbci-DAikuNe5uj6aLyMB7uGbl4rUvW1pgcCEJBrjV08iWqUTOCtvuhy13n8e77clkT1ln-muTG6uzD-fLaG6vEvVsfCbParusmbNQD9Ui1yPBWclV1W"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Ethan Harper</p>
+<p class="text-sm text-secondary-500">12th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Olivia Bennett" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ZFu48zJ3-z6kSKm1lKbGNnJhXH5KWsm_79EgxCYRPQQSBnaEeF-DOTGtiWP6zGaeno1EdOpQVbOiLkVSSIVfgS0x_tG-RNwv-SJBLpoNo7kK4_nZ6LIpY1XjhuD7-kNStrr-JdxTdNQupnAxoEPUEvZekZ470Y6d3LKOAKlmhZ6PVaPxHHy-E_7yJGf5RjlEuXSeiPvk4Judei1Ui9IfkfqF6CnkI2Ijr4BTt5bBIqRDMzkrAds1t8jPEJ5Cwg6onz3X8FzdFz57"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Olivia Bennett</p>
+<p class="text-sm text-secondary-500">11th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Noah Carter" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABMDz226V8D62TzNviDy7zTZVXjvfSpo1pwN7FP2KaAteh9mAkGgVpttiVwoL2s06bzao7Zwpc0yLLmMR4cywfSrna7EG5gmTnmgVv6_y1EeP5e-oBmjRZq6EYWCR0ilXxRpZsVs_GwaoTVCOcMrfmANtDx9pkUQHyn1qzVDMu8eGP98NELFWGf2LCqfrO-R2zXojCAvAOtJbwaEsNKctssCgNv4vaSw_jo871bQy5-04DX9p2iHDN8pQ1qi3yN0f09O28rpfEL5mi"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Noah Carter</p>
+<p class="text-sm text-secondary-500">10th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Ava Mitchell" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHcA3GMzZjKmAo-WbnnS_cab884hBJOPkAXRmq6luIOlSb-v6uHktJlaaPIu0MEX4auXj55JxjjpOCgps_sH4B0AnGLpKx3saSEaoHN2nVxBY64vnSe2y9smYkIf8oqjNQiSkrqQ6QRHZL36bjnt5Jig-DIJI-zzw2fsuBEvFF4snK8RZ9g0w03D03KCwi_6LxhTmO35h47qo_1Cn6epoDJz571j6fYfJ4jRetRhB2EEE4QUIE3kW1xm6Jy0fc5N4tdFy2fVFOuflV"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Ava Mitchell</p>
+<p class="text-sm text-secondary-500">12th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Liam Foster" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwbX85wmTtaAIAajodfwItQDB8zrzlqzEFVCp6cm48WlbB4dGRtYmSaVCsAE0y0tB4fxgmK0nIyXVrX2Ekizg_27R2a_4yz_FvP_8B6eA_mLtXrIFAD2zeSfu4pYyjowRp3K0Y18smJGoUBz1FNjpk9_2mFkXHpObD4dI4bokud5DL0Jp2ympxeAQa1FmapwnzjsDfOOX83uuQqSVy2GhwxdK33xsFe0bawijHQIGvp8g-VNSAOlrtApEcKP2RHAlHsLV04g-NraOI"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Liam Foster</p>
+<p class="text-sm text-secondary-500">11th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+<li class="flex items-center gap-4 px-4 py-3 hover:bg-secondary-100">
+<img alt="Isabella Reed" class="h-12 w-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1wFhxzZPu6F1KvdNPjxj5lJe-TJ6XrW0GrQA5xXkhHNevoEsKJE_6jiew6qYDePxfIIcOQtxN3CLH01YhXHT522s3UHvkN9wN7Jtaq0Eibx7NZRn-HiGKajmBaNDX_UM-6o2pBfTk1foO8Pyfh0Qf7s6ykIkT2yE3IXTbY5L4Z_OY-5xpgYj2V9xhScZA062mvxTmW4KFgE2gkq4pm2W4n_1nZeJjVmm1T_krsAVk6XEzhxsshqLvdUBHDo9nA3n3YOelZ_-GWgo7"/>
+<div class="flex-1">
+<p class="font-medium text-secondary-900">Isabella Reed</p>
+<p class="text-sm text-secondary-500">10th Grade</p>
+</div>
+<button class="text-secondary-400 hover:text-secondary-600">
+<span class="material-symbols-outlined"> more_vert </span>
+</button>
+</li>
+</ul>
+</main>
+<footer class="p-4">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary-500 py-4 text-base font-bold text-white shadow-lg hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+<span class="material-symbols-outlined"> add </span>
+          Add Student
+        </button>
+</footer>
+</div>
+
+</body></html>

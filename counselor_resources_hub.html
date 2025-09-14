@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>counselor_resources_hub</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #13a4ec;
+      --secondary-color: #4c809a;
+      --text-primary: #0d171b;
+      --text-secondary: #4c809a;
+      --background-primary: #f8fafc;
+      --background-secondary: #ffffff;
+      --border-color: #e2e8f0;
+    }
+    .active-tab {
+      color: var(--primary-color);
+      border-bottom-color: var(--primary-color);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-primary" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-background-primary/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-text-primary">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-text-primary text-xl font-bold leading-tight tracking-tight flex-1 text-center">Resources Hub</h1>
+<div class="w-8"></div>
+</div>
+<div class="border-b border-border-color">
+<nav class="flex justify-around px-4">
+<a class="flex flex-col items-center justify-center border-b-2 py-3 text-sm font-bold tracking-wide transition-colors duration-200 active-tab" href="#">
+            All
+          </a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-text-secondary hover:text-primary-color py-3 text-sm font-medium tracking-wide transition-colors duration-200" href="#">
+            Shared
+          </a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-text-secondary hover:text-primary-color py-3 text-sm font-medium tracking-wide transition-colors duration-200" href="#">
+            My Uploads
+          </a>
+</nav>
+</div>
+</header>
+<main class="flex-1 pb-24">
+<section class="p-4">
+<h2 class="text-text-primary text-lg font-bold leading-tight tracking-tight mb-4">Featured</h2>
+<div class="bg-background-secondary rounded-xl shadow-sm overflow-hidden">
+<div class="h-40 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAlgp7MsNiJ3-gDk_ooyA9oqKBMhwWzl4-M8rIHOCEe2PoGhpzl2JswvhYg58HyWnrssjGKaRlEr56XdBZZX49KnRbPij5mQ-TKwlCPiXnglvzbzezi4kGv7nZzCwnpuvzBcy88ueONI31K6JSR8rWBk7V1KvQxKAsTqEwW_uhw5BUOLxEJVGqxSLd4apg1tTo3OHuyWJIJaYt0ir7GjNZD1E1_cFwWxO172zFGaR4SmKJcvGpE1BCzzf8hIiJAzADm9YJ0GIg5SVm1");'></div>
+<div class="p-4">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">Roadmap</p>
+<h3 class="text-text-primary text-lg font-bold leading-tight mt-1">College Application Roadmap</h3>
+<p class="text-text-secondary text-sm font-normal leading-relaxed mt-2">A step-by-step guide to help students navigate the college application process.</p>
+<button class="mt-4 flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary-color text-white text-sm font-bold leading-normal transition-colors hover:bg-opacity-90">
+<span>View Roadmap</span>
+</button>
+</div>
+</div>
+</section>
+<section class="px-4">
+<h2 class="text-text-primary text-lg font-bold leading-tight tracking-tight mt-6 mb-4">All Resources</h2>
+<div class="grid gap-4">
+<div class="flex items-center gap-4 bg-background-secondary p-3 rounded-xl shadow-sm">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwhKa0gXRagHHhVe6OAlOomLJjCOWlQbfC-gT1_0z25dGcvosktxDncUCTiErgneImbCAa2f3YEUH_MBtXkIGyIIDmlELxsLVxI8KXbj_9P9gSLBQ_A34jJIBERjJwLZkbH1e62_dctkbpMmnPnb8L5Rn7r996D217oKIK-HWfLKkLtaQSJXSnGWDF6ktsmo7AHl9q4tYLizEJfh3e9ePDwr-L1adFPn7u6b-e_Ly0d_Cw9udFAotNZeXjjzkjph7EiUOBph5h4gpM");'></div>
+</div>
+<div class="flex-1">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">PDF</p>
+<h3 class="text-text-primary text-base font-bold leading-tight mt-1">Financial Aid Guide</h3>
+<p class="text-text-secondary text-sm font-normal leading-normal mt-1 line-clamp-2">Comprehensive guide on understanding and applying for financial aid.</p>
+</div>
+<button class="text-text-secondary self-start">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 bg-background-secondary p-3 rounded-xl shadow-sm">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrhn3340jT3DFPUjlj-UAI58wfuc5xw_Uth2vqOtnFlS1OaHb2M963zr-kep7mip_F3SsG8_09jNLVme5M7gIPG4nPOI2hC80ekobQDs2Iqn9TauJn5RecikGaHd71m7fn_eTBqyfPGzyJCWReIBdrc4KkwvzLkc0k2Sbq1dca-aj70_lWCEaksenHnJHX5dWOgy-BIcbIj2Tys9QnV8dY4LwntEAjiphd1L7_BpCqx0od2Q79Qfy72sdRFATJGzN61t7h7Y_ENWiW");'></div>
+</div>
+<div class="flex-1">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">Webinar</p>
+<h3 class="text-text-primary text-base font-bold leading-tight mt-1">Career Exploration Webinar</h3>
+<p class="text-text-secondary text-sm font-normal leading-normal mt-1 line-clamp-2">Recorded webinar on exploring different career paths and making informed decisions.</p>
+</div>
+<button class="text-text-secondary self-start">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="flex items-center gap-4 bg-background-secondary p-3 rounded-xl shadow-sm">
+<div class="flex-shrink-0">
+<div class="w-16 h-16 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8H8hFADtzZrimZxTKQJJxvOYnrpwl-jfiQBm-B7P_ByInVWacQcHPk-tNSzTUmyJU99_n1pisgNx3NZo6dHf8e1mV4JJ0PuaQIeJXoXwnwi9o9Bnv6ft-RUcJVcF7QLxaSkCJ7cEddUeoG6ZDY1MW2INrci_5jDbxNsn9xlgBRTfznd78uxf5aDOAqwjkDNDJQxaRmeouqc0LTdKNEXYNehc0ivf43SHon80xx8FlDD0U2OGVHVY1AC076tMKaLTVwQ1zwQoERtZO");'></div>
+</div>
+<div class="flex-1">
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider">PDF</p>
+<h3 class="text-text-primary text-base font-bold leading-tight mt-1">Scholarship Opportunities</h3>
+<p class="text-text-secondary text-sm font-normal leading-normal mt-1 line-clamp-2">A curated list of scholarships available for students.</p>
+</div>
+<button class="text-text-secondary self-start">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-primary/80 backdrop-blur-sm border-t border-border-color">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-12 px-6 bg-primary-color text-white text-base font-bold leading-normal tracking-wide shadow-lg hover:bg-opacity-90 transition-all duration-200">
+<span class="material-symbols-outlined">add</span>
+<span>Upload Resource</span>
+</button>
+</footer>
+</div>
+
+</body></html>

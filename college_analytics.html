@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>college_analytics</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #0d171b;
+        --accent-color: #e7eff3;
+        --text-primary: #0d171b;
+        --text-secondary: #4c809a;
+        --background-color: #f8fafc;
+      }
+      .bg-primary { background-color: var(--primary-color); }
+      .text-primary { color: var(--primary-color); }
+      .border-primary { border-color: var(--primary-color); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--background-color)]" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 bg-[var(--background-color)]/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-[var(--text-primary)]">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-xl font-bold text-[var(--text-primary)] pr-10">Analytics</h1>
+</div>
+</header>
+<main class="p-4">
+<section class="mb-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-[var(--text-primary)]">Trending Courses</h2>
+<div class="flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm text-[var(--text-secondary)] shadow-sm">
+<span>Last 30 Days</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</div>
+</div>
+<div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+<div class="flex items-baseline gap-4">
+<p class="text-4xl font-bold text-[var(--text-primary)]">1,200</p>
+<p class="text-sm text-green-600 font-medium flex items-center">
+<span class="material-symbols-outlined text-base mr-1">arrow_upward</span>
+<span>15%</span>
+</p>
+</div>
+<p class="text-base font-medium text-[var(--text-secondary)] mb-6">Total Student Interest</p>
+<div class="space-y-4">
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Course A</p>
+<div class="h-2 rounded-full bg-[var(--accent-color)]"><div class="h-2 rounded-full bg-primary" style="width: 40%;"></div></div>
+<p class="text-sm font-bold text-[var(--text-primary)]">480</p>
+</div>
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Course B</p>
+<div class="h-2 rounded-full bg-[var(--accent-color)]"><div class="h-2 rounded-full bg-primary" style="width: 80%;"></div></div>
+<p class="text-sm font-bold text-[var(--text-primary)]">960</p>
+</div>
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Course C</p>
+<div class="h-2 rounded-full bg-[var(--accent-color)]"><div class="h-2 rounded-full bg-primary" style="width: 30%;"></div></div>
+<p class="text-sm font-bold text-[var(--text-primary)]">360</p>
+</div>
+<div class="grid grid-cols-[auto_1fr_auto] items-center gap-3">
+<p class="text-sm font-medium text-[var(--text-secondary)]">Course D</p>
+<div class="h-2 rounded-full bg-[var(--accent-color)]"><div class="h-2 rounded-full bg-primary" style="width: 90%;"></div></div>
+<p class="text-sm font-bold text-[var(--text-primary)]">1080</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="mb-4 text-2xl font-bold text-[var(--text-primary)]">Student Engagement</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+<p class="mb-1 text-sm font-medium text-[var(--text-secondary)]">Profile Views</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">500</p>
+<p class="text-sm text-green-600 font-medium">+10%</p>
+</div>
+<div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+<p class="mb-1 text-sm font-medium text-[var(--text-secondary)]">Course Views</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">800</p>
+<p class="text-sm text-green-600 font-medium">+12%</p>
+</div>
+<div class="col-span-2 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+<p class="mb-1 text-sm font-medium text-[var(--text-secondary)]">Applications Started</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">200</p>
+<p class="text-sm text-green-600 font-medium">+8%</p>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-[var(--text-primary)]">Interest Over Time</h2>
+<div class="flex items-center gap-2 rounded-full bg-white px-3 py-1 text-sm text-[var(--text-secondary)] shadow-sm">
+<span>Last 6 Months</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</div>
+</div>
+<div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+<div class="flex items-baseline gap-4">
+<p class="text-4xl font-bold text-[var(--text-primary)]">75%</p>
+<p class="text-sm text-green-600 font-medium flex items-center">
+<span class="material-symbols-outlined text-base mr-1">arrow_upward</span>
+<span>5%</span>
+</p>
+</div>
+<p class="text-base font-medium text-[var(--text-secondary)] mb-6">Average Interest</p>
+<div class="grid grid-cols-6 gap-4 items-end" style="height: 180px;">
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 80%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">Jan</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 60%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">Feb</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 80%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">Mar</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 40%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">Apr</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 50%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">May</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-full h-full flex items-end"><div class="bg-primary w-full rounded-t-md" style="height: 60%;"></div></div>
+<p class="text-xs font-medium text-[var(--text-secondary)]">Jun</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-slate-200 bg-[var(--background-color)]/80 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-xs font-medium">Students</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 rounded-lg bg-primary/10 p-2 text-primary" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-xs font-bold">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 p-2 text-[var(--text-secondary)]" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

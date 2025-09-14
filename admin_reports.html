@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>admin_reports</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #13a4ec;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+      }
+      .bg-primary { background-color: var(--primary-500); }
+      .text-primary { color: var(--primary-500); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-50 font-['Lexend'] text-gray-800">
+<div class="relative min-h-screen">
+<header class="sticky top-0 z-10 bg-white/80 backdrop-blur-sm shadow-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between py-4">
+<button class="flex items-center gap-2">
+<span class="material-symbols-outlined">
+                            arrow_back_ios_new
+                        </span>
+</button>
+<h1 class="text-xl font-bold">Reports</h1>
+<div class="w-8"></div>
+</div>
+</div>
+</header>
+<main class="container mx-auto p-4 pb-24">
+<section class="mb-8">
+<h2 class="text-2xl font-bold mb-4">Enrollment Overview</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 text-sm font-medium">Total Enrollments</p>
+<p class="text-3xl font-bold text-gray-900 my-1">1,250</p>
+<div class="flex items-center text-green-600">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<p class="text-sm font-medium ml-1">+12%</p>
+</div>
+</div>
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 text-sm font-medium">Dropout Rate</p>
+<p class="text-3xl font-bold text-gray-900 my-1">8%</p>
+<div class="flex items-center text-red-600">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<p class="text-sm font-medium ml-1">-2%</p>
+</div>
+</div>
+</div>
+<div class="mt-4 bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-gray-600 font-medium">Enrollment Trend</p>
+<p class="text-sm text-gray-500">Last 12 Months</p>
+</div>
+<div class="flex items-center text-green-600">
+<span class="material-symbols-outlined text-base">trending_up</span>
+<p class="text-sm font-medium ml-1">+12%</p>
+</div>
+</div>
+<div class="h-48 mt-4">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 300 100">
+<defs>
+<linearGradient id="enrollmentGradient" x1="0" x2="0" y1="0" y2="100%">
+<stop offset="0%" stop-color="var(--primary-200)"></stop>
+<stop offset="100%" stop-color="var(--primary-50)" stop-opacity="0.1"></stop>
+</linearGradient>
+</defs>
+<path d="M 0 60 C 20 80, 40 40, 60 50 C 80 60, 100 20, 120 30 C 140 40, 160 80, 180 70 C 200 60, 220 90, 240 80 C 260 70, 280 40, 300 50 L 300 100 L 0 100 Z" fill="url(#enrollmentGradient)"></path>
+<path d="M 0 60 C 20 80, 40 40, 60 50 C 80 60, 100 20, 120 30 C 140 40, 160 80, 180 70 C 200 60, 220 90, 240 80 C 260 70, 280 40, 300 50" fill="none" stroke="var(--primary-500)" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-between text-xs text-gray-500 mt-2">
+<span>Jan</span>
+<span>Apr</span>
+<span>Jul</span>
+<span>Oct</span>
+<span>Dec</span>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-2xl font-bold mb-4">Scholarship Applications</h2>
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 mb-4">
+<p class="text-gray-600 text-sm font-medium">Scholarships Applied</p>
+<p class="text-3xl font-bold text-gray-900 my-1">850</p>
+<div class="flex items-center text-green-600">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<p class="text-sm font-medium ml-1">+15%</p>
+</div>
+</div>
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 font-medium">Applications by Category</p>
+<p class="text-sm text-gray-500">Current Year</p>
+<div class="flex items-end h-40 space-x-4 mt-4 px-2">
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-100 rounded-t-md" style="height: 75%;"></div>
+<p class="text-xs text-gray-500 mt-1 text-center">Academic</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-100 rounded-t-md" style="height: 40%;"></div>
+<p class="text-xs text-gray-500 mt-1 text-center">Athletic</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-100 rounded-t-md" style="height: 90%;"></div>
+<p class="text-xs text-gray-500 mt-1 text-center">Need-Based</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-100 rounded-t-md" style="height: 60%;"></div>
+<p class="text-xs text-gray-500 mt-1 text-center">Merit-Based</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Counselor Sessions</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 text-sm font-medium">Total Sessions</p>
+<p class="text-3xl font-bold text-gray-900 my-1">2,100</p>
+<div class="flex items-center text-green-600">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<p class="text-sm font-medium ml-1">+10%</p>
+</div>
+</div>
+<div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 text-sm font-medium">Avg. Duration</p>
+<p class="text-3xl font-bold text-gray-900 my-1">45<span class="text-xl">m</span></p>
+<div class="flex items-center text-green-600">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<p class="text-sm font-medium ml-1">+5%</p>
+</div>
+</div>
+</div>
+<div class="mt-4 bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+<p class="text-gray-600 font-medium">Sessions by Counselor</p>
+<p class="text-sm text-gray-500">Last Quarter</p>
+<div class="space-y-4 mt-4">
+<div>
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-medium text-gray-700">Dr. Anya Sharma</p>
+<p class="text-sm text-gray-500">420</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary-400 h-2 rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-medium text-gray-700">Mr. Ben Carter</p>
+<p class="text-sm text-gray-500">150</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary-400 h-2 rounded-full" style="width: 30%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-medium text-gray-700">Ms. Chloe Davis</p>
+<p class="text-sm text-gray-500">380</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary-400 h-2 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<p class="text-sm font-medium text-gray-700">Dr. Ethan Foster</p>
+<p class="text-sm text-gray-500">500</p>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary-400 h-2 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-t-md">
+<div class="container mx-auto px-4">
+<div class="flex justify-around items-center h-16">
+<a class="flex flex-col items-center text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs">Home</span>
+</a>
+<a class="flex flex-col items-center text-primary font-bold" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-xs">Reports</span>
+</a>
+<a class="flex flex-col items-center text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs">Students</span>
+</a>
+<a class="flex flex-col items-center text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs">Settings</span>
+</a>
+</div>
+</div>
+</nav>
+</div>
+
+</body></html>

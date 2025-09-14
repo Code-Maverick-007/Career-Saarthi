@@ -1,0 +1,102 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>college_settings</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="flex flex-col">
+<header class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-[#0d171b] flex size-10 shrink-0 items-center justify-center rounded-full" data-icon="ArrowLeft" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-[#0d171b] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">College Settings</h1>
+</div>
+<div class="overflow-x-auto">
+<nav class="flex border-b border-[#cfdfe7] px-4">
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-[#13a4ec] text-[#0d171b] pb-3 pt-4 px-3" href="#">
+<p class="text-sm font-semibold leading-normal">About Us</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-slate-500 pb-3 pt-4 px-3" href="#">
+<p class="text-sm font-semibold leading-normal">NAAC Rating</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-slate-500 pb-3 pt-4 px-3" href="#">
+<p class="text-sm font-semibold leading-normal">Cutoff Trends</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-slate-500 pb-3 pt-4 px-3" href="#">
+<p class="text-sm font-semibold leading-normal">Placement Stats</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-slate-500 pb-3 pt-4 px-3" href="#">
+<p class="text-sm font-semibold leading-normal">Brochures</p>
+</a>
+</nav>
+</div>
+</header>
+<main class="flex-1 px-4 py-6">
+<h2 class="text-[#0d171b] text-xl font-bold leading-tight tracking-[-0.015em] pb-4">About Us</h2>
+<div class="space-y-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="collegeName">College Name</label>
+<input class="form-input w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="collegeName" placeholder="Enter college name"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="collegeDescription">College Description</label>
+<textarea class="form-textarea w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="collegeDescription" placeholder="Tell us about your college" rows="4"></textarea>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="collegeAddress">College Address</label>
+<input class="form-input w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="collegeAddress" placeholder="Enter college address"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="collegeWebsite">College Website</label>
+<input class="form-input w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="collegeWebsite" placeholder="https://example.com" type="url"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="contactEmail">Contact Email</label>
+<input class="form-input w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="contactEmail" placeholder="you@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-slate-900 text-sm font-medium leading-normal" for="contactPhone">Contact Phone</label>
+<input class="form-input w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-base text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500" id="contactPhone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div class="flex justify-end pt-8">
+<button class="flex w-full max-w-xs cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-[#13a4ec] text-slate-50 text-base font-bold leading-normal tracking-[0.015em] shadow-md hover:bg-blue-600 transition-colors">
+<span class="truncate">Save Changes</span>
+</button>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-slate-50/80 backdrop-blur-sm">
+<div class="flex justify-around border-t border-slate-200 py-2">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">groups</span>
+<p class="text-xs font-medium">Students</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined text-2xl">description</span>
+<p class="text-xs font-medium">Applications</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[#13a4ec]" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">settings</span>
+<p class="text-xs font-medium">Settings</p>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Saarthi - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+        }
+        .tab {
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .tab.active {
+            border-bottom-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .alert-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            animation: slideIn 0.3s ease-out;
+            z-index: 1000;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="p-6">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Career Saarthi</h1>
+                <p class="text-gray-600">Your personal career guidance platform</p>
+            </div>
+
+            <div class="flex border-b mb-6">
+                <div class="tab active w-1/2" data-role="student" onclick="changeRole('student')">
+                    <span class="material-icons mr-2">school</span> Student
+                </div>
+                <div class="tab w-1/2" data-role="counselor" onclick="changeRole('counselor')">
+                    <span class="material-icons mr-2">support_agent</span> Counselor
+                </div>
+            </div>
+
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" required 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="text-center mt-4">
+                <button id="demoLogin" class="text-blue-600 text-sm hover:underline">
+                    Try Demo Account
+                </button>
+            </div>
+
+            <div class="text-center mt-6 text-sm text-gray-500">
+                Don't have an account? 
+                <a href="#" class="text-blue-600 hover:underline">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Demo credentials
+        const demoCredentials = {
+            student: { email: 'student@demo.com', password: 'student123', redirect: 'student_dashboard.html' },
+            counselor: { email: 'counselor@demo.com', password: 'counselor123', redirect: 'counselor_dashboard.html' },
+            admin: { email: 'admin@demo.com', password: 'admin123', redirect: 'admin_dashboard.html' }
+        };
+
+        let currentRole = 'student';
+
+        function changeRole(role) {
+            currentRole = role;
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.role === role);
+            });
+            
+            // Auto-fill demo credentials when changing role
+            if (demoCredentials[role]) {
+                document.getElementById('email').value = demoCredentials[role].email;
+                document.getElementById('password').value = demoCredentials[role].password;
+            }
+        }
+
+        function showAlert(message, type = 'info') {
+            const existingAlert = document.querySelector('.alert-message');
+            if (existingAlert) existingAlert.remove();
+
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert-message ${type === 'error' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`;
+            alertDiv.textContent = message;
+            document.body.appendChild(alertDiv);
+
+            setTimeout(() => alertDiv.remove(), 3000);
+        }
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (!email || !password) {
+                showAlert('Please enter both email and password', 'error');
+                return;
+            }
+            
+            // Simple validation for demo purposes
+            const demoUser = Object.values(demoCredentials).find(
+                user => user.email === email && user.password === password
+            );
+            
+            if (demoUser) {
+                showAlert('Login successful! Redirecting...', 'success');
+                setTimeout(() => {
+                    window.location.href = demoUser.redirect;
+                }, 1000);
+            } else {
+                showAlert('Invalid credentials. Please try again.', 'error');
+            }
+        });
+
+        // Demo login button
+        document.getElementById('demoLogin').addEventListener('click', function() {
+            const demo = demoCredentials[currentRole];
+            if (demo) {
+                document.getElementById('email').value = demo.email;
+                document.getElementById('password').value = demo.password;
+                // Auto-submit after a small delay
+                setTimeout(() => {
+                    document.getElementById('loginForm').dispatchEvent(new Event('submit'));
+                }, 300);
+            }
+        });
+
+        // Initialize with student role
+        changeRole('student');
+    </script>
+</body>
+</html>

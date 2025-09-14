@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>admin_college_management</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0f9ff;
+        --primary-100: #e0f2fe;
+        --primary-200: #bae6fd;
+        --primary-300: #7dd3fc;
+        --primary-400: #38bdf8;
+        --primary-500: #13a4ec;
+        --primary-600: #0284c7;
+        --primary-700: #0369a1;
+        --primary-800: #075985;
+        --primary-900: #0c4a6e;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-slate-50">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="sticky top-0 z-10 bg-slate-50/80 backdrop-blur-sm">
+<header class="flex items-center p-4 pb-2 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-700">
+<span class="material-symbols-outlined text-2xl"> arrow_back </span>
+</button>
+<h1 class="text-slate-900 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Colleges</h1>
+</header>
+<div class="px-4 pb-3 pt-2">
+<div class="relative">
+<input class="form-input flex w-full resize-none overflow-hidden rounded-xl text-slate-900 focus:outline-0 focus:ring-2 focus:ring-primary-500 border border-slate-300 bg-white h-12 placeholder:text-slate-400 p-3.5 text-base font-normal leading-normal pl-11" placeholder="Search colleges" value=""/>
+<div class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="MagnifyingGlass" data-size="24px" data-weight="regular">
+<span class="material-symbols-outlined !text-2xl"> search </span>
+</div>
+</div>
+</div>
+</div>
+<main class="flex-1">
+<div class="divide-y divide-slate-100">
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlt29ndUgaOS-lUYxb6W86asRr3yDp3IVl6ZTWWUdB26rT3z4RFEsOLIkr5rK5Ww1Y4b5tYQeQ-VljOGmf6DmkylrruJw_xVsQDzwhugTakOZ2xdkaMRhozZunNSia9f-lXLG_gMPsSQ1Rd-YnTmihdGFPBJ6YMtmvkYCn6ds-K2vpwmWEtpSQZxMw4bX7DqnPq9P8s6RYO2Bg5rGQDryr4mtg8l6IkcaQrpP37PwhKuY-1sVghY4AWtP6BxpH9JJZvOWLQSwgU27U");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Delhi</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A++</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbwdSnIh2ggDTRgX2b68tC_6x5MQaJzPWhFq_uCOD8V5Oizhuu7pl5WQ5qt5EFeUHYFqqw6Gk1qU7odWi0PqGdLdmritKcOgfbXyf3ebBwh0C1ksak7LevVhOKNJPYZDxODF11OdHRCwrAIwSNJ3E0hCm0M3kF3sCWhTh6CRiLoePseQN_4qhgbOXTAolX8mZNkSIcdPJsv-PB9RhTgzy_jTjv45x6YaLsnwiETjEkzUk1ofYsiBz1P1rLfRc-BqA_fHygMyQZH3GP");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Bombay</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A+</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk4OZYpIGBrH3JFoLpCsm4o_2vG_VPndwZZkG1pJ1OFRq2B-wJ2jcrNyCGabpP35_TmUpPCQX67WtAwPR83jOV5qnhpL1qJ4zw0sW_hPd5buFGtrfteXw4_lrYmGEQz1lPRWEQBSjNltOlOzUczsfHCyfe_FQfTJwW8d-KxEx_3PAg00tFlCqxFrqJpi-dzrhvDsIXPaBOusuX90EeCdY_Cc8jQ8WUJqZ_c_pUW9qqKR_3KxMmhteTvu1B4dxOatp3j6upM6YVd37D");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Madras</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXC1iKzQdo_nsNWdHFwSpn5lSoE4BDzRWa-VBKqImSbMVl9sliirtvyabIq8XgHUIh5o3WX3ixJ8dN7kQIowKxyRXJBSUeNT-1T03-7Xn8BmWUcBb1kqnOH6lDfq-r-b9dvgm48SyLFu06kmhoJFSy1j-6FrATmtTbx_aaASZpl8aYO0gkm_5pLWXHKJghp813el_YqOsXkrguZluLHYoGE0WlpTVe_4pgdeZJXzDoyekOAk-QtpKsdSiamrdctJSy9ccmdNEVanuG");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Kanpur</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A++</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCm8I-I-aTwrpJ8Tuqx-VUnQ6IR-fCWttbFMCCFwtDl2w43Wi_gYuGUVrpdytGPzxhNwixQRAyBPF6mDUxnruBCqaVQPUNGAV8_PYJ4hr5KdmAUBo-FFH7AmEEmTiqZ99KSNaXzgOhNxxukkFsYX3OIRA148Gg0Zhp4G-fPyrzlIXjPiwRqam-8DgZ6Bg9PLI66yQ2Fk5neIexzuA3slT4dnzREsQBOmv45OtvsvDsoq7Nn0Ju26dVYpHxhuW7PTD7ohPtp59z-eEYH");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Kharagpur</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A+</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 min-h-[72px]">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgXvhXJBmhxkLd0HBj05B_vdNMZRwVEbYUMmdNqg1FYK1MCxAIwD8Rl1nMlLYV-TAvG55OqQki4Dbzj6T-PSZqByAOW1xH82EJ9oFRWiy547OC67xYzJEHKMLnHl1n4Sac4knrNsTFhfZmhLzYygSJFQacZXEzhkX5iOrCp1gpjrV12Px-Wrn5Ze_yyx7ZTP-Gbid53zOO2eGGOv1-32llVHM5TDzB6rLD7s754T0rvchGgSyM8CjNono3F7doihJ5Av3o8FKdOcSJ");'></div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-slate-900 text-base font-medium leading-normal line-clamp-1">Indian Institute of Technology, Roorkee</p>
+<p class="text-slate-500 text-sm font-normal leading-normal line-clamp-2">NAAC A</p>
+</div>
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100">
+<span class="material-symbols-outlined text-2xl"> edit </span>
+</button>
+</div>
+</div>
+</main>
+<div class="sticky bottom-0 flex justify-end p-4 bg-slate-50/80 backdrop-blur-sm">
+<button class="flex h-14 items-center justify-center gap-2 rounded-full bg-primary-500 px-6 text-white shadow-lg hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+<span class="material-symbols-outlined text-2xl"> add </span>
+<span class="text-base font-bold leading-normal tracking-[0.015em]">Add College</span>
+</button>
+</div>
+</div>
+
+</body></html>

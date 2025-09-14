@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Saarthi - College Search</title>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect">
+    <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Lexend:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #13a4ec;
+            --secondary-color: #e7f6fe;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --background-color: #f8fafc;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .active-link {
+            color: var(--primary-color) !important;
+        }
+        .h-safe-area-bottom {
+            height: env(safe-area-inset-bottom, 0);
+        }
+    </style>
+</head>
+<body class="bg-background-color min-h-screen flex flex-col" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- Mobile Sidebar Menu -->
+<aside id="mobile-menu" class="mobile-menu fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
+    <div class="p-4 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800">Menu</h2>
+        <button id="close-menu" class="absolute right-4 top-4 text-gray-500 hover:text-gray-700">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="p-4 space-y-2">
+        <a href="student_home_screen.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">home</span>
+            <span>Home</span>
+        </a>
+        <a href="college_search.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100 active-link">
+            <span class="material-symbols-outlined align-middle mr-2">school</span>
+            <span>Colleges</span>
+        </a>
+        <a href="student_career_explorer.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">work</span>
+            <span>Careers</span>
+        </a>
+        <a href="student_ai_advisor.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">smart_toy</span>
+            <span>AI Advisor</span>
+        </a>
+        <a href="student_dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">bar_chart_4_bars</span>
+            <span>Dashboard</span>
+        </a>
+    </nav>
+</aside>
+
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-background-color/90 backdrop-blur-sm border-b border-gray-200">
+    <div class="flex items-center p-4">
+        <button id="mobile-menu-button" class="p-2 -ml-2 md:hidden">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+        <h1 class="flex-1 text-center text-lg font-bold text-text-primary md:text-xl">Colleges</h1>
+        <div class="w-10"></div> <!-- Spacer for alignment -->
+    </div>
+<div class="relative mt-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+<input class="form-input w-full rounded-full border-gray-300 bg-white py-2 pl-10 pr-4 text-text-primary placeholder:text-text-secondary focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Search for colleges, courses..." value=""/>
+</div>
+</header>
+<main id="main-content" class="flex-grow p-4">
+<div class="mb-4">
+<h2 class="mb-2 text-lg font-semibold text-text-primary">Filters</h2>
+<div class="flex flex-wrap gap-2">
+<button class="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm text-text-primary shadow-sm">
+                State <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm text-text-primary shadow-sm">
+                Stream <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm text-text-primary shadow-sm">
+                Type <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex items-center gap-1 rounded-full bg-white px-3 py-1.5 text-sm text-text-primary shadow-sm">
+                Distance <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-xl bg-white p-4 shadow-md">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdHzkjxFgfret7R3GYT2WvcJgX4aRm-_LKivXiM1m7oa-xi5RRKKdEe8eB-8Cr94FoeSbUYokdk-o_VEdpaoqbDRW5vrfaqa48prImYX7Gl7kbJpsg86FChttZ_3m89JVvx-KX3bOLmhrQMri3BH1PyxGZtxRxdXxVBL99Yc6suDig-2qRsP2cVmWIH56uGJ2LGtslY5FhxqQBNwWtqjjpuZMKpKwtpzrvetCUQxjA5qrT13zKRSyZYLGn8SHnixxUVHpW2-WqUkRw");'></div>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-text-primary">Columbia University</h3>
+<p class="text-sm text-text-secondary">New York, NY</p>
+<p class="mt-1 text-sm text-text-secondary">Engineering, Arts, Business...</p>
+<div class="mt-2 inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    AI Recommended
+                  </div>
+</div>
+</div>
+<button class="mt-4 w-full rounded-lg bg-[var(--primary-color)] py-2 text-center font-semibold text-white transition-colors hover:bg-opacity-90">
+                View Details
+              </button>
+</div>
+<div class="rounded-xl bg-white p-4 shadow-md">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvFuKlrFXHdNs2Ucnw-ERAcRWBYzbUr-GbIXBkps64COF1e0dUpftl2dLPlunv863jwo6gpyCvWN1uQimb0P4lGXRh2xVbdbBqQE77o6XIx8aubx2VQnuz5k3u0_ukKoJGpC_KA_QHN6bBNnKOJOvqvjHUZEagKqCOww4OaSn1B7b-Vo6QD4-MyB9U6BcBZSaZzu5TWYVr94A2a5QgqNRhwNFbZcQ120o_tPpA5GcgHgq3xTZLCjA9fRft6UwMyUdMlPUyfPcN5jhD");'></div>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-text-primary">Harvard University</h3>
+<p class="text-sm text-text-secondary">Cambridge, MA</p>
+<p class="mt-1 text-sm text-text-secondary">Law, Medicine, Arts...</p>
+<div class="mt-2 inline-flex items-center gap-1 rounded-full bg-orange-100 px-2 py-0.5 text-xs font-medium text-orange-800">
+<span class="material-symbols-outlined text-sm">warning</span>
+                     Low Eligibility
+                  </div>
+</div>
+</div>
+<button class="mt-4 w-full rounded-lg bg-[var(--primary-color)] py-2 text-center font-semibold text-white transition-colors hover:bg-opacity-90">
+                View Details
+              </button>
+</div>
+<div class="rounded-xl bg-white p-4 shadow-md">
+<div class="flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-20 shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXm23czkF_LhONp0IzbJ9ICzedHcm6o7qBaYzyUMKxN2Ok_IUVWJQzvU7LJL3BL4qBW-rDdV1OjDOa4YdXRm4InGzqOGwVqiqf0p_UQL5OiyMZyXHmBHupPTUtDBtVGRlS56w-fZ6ffFrw_dr8h80m6zc4dQmzdbQicfW7fO6uvO2TYv7wrAPesULpdFJqQZUtk1y3IfWpJEqvIZXBVP02aR6Vmqzhjkr0hYZf2F2O8aA_9gaTrogEz0aNdhUIWfu6rmchArMJHsyT");'></div>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-text-primary">Stanford University</h3>
+<p class="text-sm text-text-secondary">Stanford, CA</p>
+<p class="mt-1 text-sm text-text-secondary">Computer Science, Engineering...</p>
+<div class="mt-2 inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    AI Recommended
+                  </div>
+</div>
+</div>
+<button class="mt-4 w-full rounded-lg bg-[var(--primary-color)] py-2 text-center font-semibold text-white transition-colors hover:bg-opacity-90">
+                View Details
+              </button>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 border-t border-gray-200 bg-background-color/95 backdrop-blur-sm shadow-[0_-1px_3px_rgba(0,0,0,0.1)]">
+    <!-- Navigation -->
+    <nav class="flex justify-around px-2 pb-2 pt-1">
+        <a href="student_home_screen.html" class="flex flex-col items-center justify-end gap-1 text-text-secondary nav-link" data-page="home">
+            <span class="material-symbols-outlined">home</span>
+            <p class="text-xs font-medium">Home</p>
+        </a>
+        <a href="college_search.html" class="flex flex-col items-center justify-end gap-1 text-[var(--primary-color)] nav-link" data-page="colleges">
+            <span class="material-symbols-outlined">school</span>
+            <p class="text-xs font-bold">Colleges</p>
+        </a>
+        <a href="student_career_explorer.html" class="flex flex-col items-center justify-end gap-1 text-text-secondary nav-link" data-page="careers">
+            <span class="material-symbols-outlined">work</span>
+            <p class="text-xs font-medium">Careers</p>
+        </a>
+        <a href="student_ai_advisor.html" class="flex flex-col items-center justify-end gap-1 text-text-secondary nav-link" data-page="ai">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <p class="text-xs font-medium">AI Advisor</p>
+        </a>
+        <a href="student_dashboard.html" class="flex flex-col items-center justify-end gap-1 text-text-secondary nav-link" data-page="dashboard">
+            <span class="material-symbols-outlined">bar_chart_4_bars</span>
+            <p class="text-xs font-medium">Dashboard</p>
+        </a>
+    </nav>
+    <div class="h-safe-area-bottom"></div>
+</footer>
+
+<!-- SPA Navigation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuOverlay.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        if (mobileMenuButton) mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        if (closeMenuButton) closeMenuButton.addEventListener('click', toggleMobileMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+        // SPA Navigation
+        const mainContent = document.getElementById('main-content');
+        const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+        let isLoading = false;
+
+        async function loadPage(url, pushState = true) {
+            if (isLoading) return;
+            
+            try {
+                isLoading = true;
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Page not found');
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Update main content
+                const newContent = doc.querySelector('#main-content').innerHTML;
+                mainContent.innerHTML = newContent;
+                
+                // Update page title
+                document.title = doc.title;
+                
+                // Update URL and history
+                if (pushState) {
+                    window.history.pushState({ url }, '', url);
+                }
+                
+                // Update active link
+                updateActiveLink(url);
+                
+                // Close mobile menu if open
+                if (mobileMenu && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu();
+                }
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+            } catch (error) {
+                console.error('Error loading page:', error);
+                // Fallback to traditional navigation
+                window.location.href = url;
+            } finally {
+                isLoading = false;
+            }
+        }
+
+        function updateActiveLink(url) {
+            // Remove active class from all links
+            document.querySelectorAll('.nav-link, #mobile-menu a').forEach(link => {
+                link.classList.remove('active-link', 'text-[var(--primary-color)]');
+                link.classList.add('text-text-secondary');
+                
+                // Reset font weight for all links
+                const textElement = link.querySelector('p');
+                if (textElement) {
+                    textElement.classList.remove('font-bold');
+                    textElement.classList.add('font-medium');
+                }
+            });
+            
+            // Add active class to current page link
+            const currentPage = url.split('/').pop() || 'student_home_screen.html';
+            document.querySelectorAll(`a[href*="${currentPage}"]`).forEach(link => {
+                link.classList.add('active-link', 'text-[var(--primary-color)]');
+                link.classList.remove('text-text-secondary');
+                
+                // Make the text bold for active link
+                const textElement = link.querySelector('p');
+                if (textElement) {
+                    textElement.classList.remove('font-medium');
+                    textElement.classList.add('font-bold');
+                }
+            });
+        }
+
+        // Handle navigation link clicks
+        function handleNavigation(e) {
+            const link = e.currentTarget;
+            const url = link.getAttribute('href');
+            
+            // Skip if it's an external link or anchor link
+            if (url.startsWith('http') || url.startsWith('#')) return;
+            
+            e.preventDefault();
+            loadPage(url);
+        }
+
+        // Add click event listeners to all navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavigation);
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            if (e.state && e.state.url) {
+                loadPage(e.state.url, false);
+            }
+        });
+
+        // Initialize active link
+        updateActiveLink(window.location.pathname);
+    });
+</script>
+</div>
+
+</body></html>

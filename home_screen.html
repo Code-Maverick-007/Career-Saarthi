@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>home_screen</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #fefce8;
+        --primary-100: #fcf9c5;
+        --primary-200: #f9f506;
+        --primary-300: #e2dd05;
+        --primary-400: #c9c404;
+        --primary-500: #b0ad04;
+        --primary-600: #979503;
+        --primary-700: #7e7d03;
+        --primary-800: #656402;
+        --primary-900: #4c4b02;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white">
+<div class="relative flex size-full min-h-screen flex-col bg-[#fcfcf8] justify-between group/design-root" style='font-family: "Spline Sans", "Noto Sans", sans-serif;'>
+<div class="flex flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between bg-white/80 p-4 pb-2 backdrop-blur-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl text-green-700">school</span>
+<h2 class="text-[#1c1c0d] text-lg font-bold leading-tight tracking-[-0.015em]">CollegeCompass</h2>
+</div>
+<button class="p-2">
+<span class="material-symbols-outlined text-2xl text-gray-700">menu</span>
+</button>
+</header>
+<main class="flex-1">
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-6 text-center" style='background-image: linear-gradient(to top, rgba(0, 80, 70, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEw3m4UoA7EWaJ18izENwT7d1acxv23sHSHOMn-d8T3t0urOaTIndghvku9U293YeANw8AKVrFt2MV5NtMf0oB_wddklxOlsO7sZ_07gzRTU8BapQJdxD9phwiyUyPNyog9GRYMeWUUFbBFKP6FY2YTLazFIP-oeVHPyZ1J-NI-lqaWSxIh5eNR0rcanps_cLNXEgW5iJosBG-NFVEJ9SDyk_BrOItwM7-xxqzhUt2obyWWE7iX_PK3y9JrT4pJmQGM6fqtv49b5Po");'>
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Discover Your College with AI!
+                  </h1>
+<p class="text-white/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Unlock your potential with our AI-powered college guidance platform. Find the perfect fit for your academic journey.
+                  </p>
+</div>
+<div class="w-full max-w-md">
+<label class="flex h-14 w-full items-center rounded-full bg-white shadow-lg @[480px]:h-16">
+<div class="pl-5 pr-2 text-gray-400">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input w-full flex-1 appearance-none border-none bg-transparent p-0 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-0 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal" placeholder="Search for colleges, courses..." value=""/>
+<button class="mr-2 flex h-10 w-10 items-center justify-center rounded-full bg-primary-200 text-[#1c1c0d] @[480px]:h-12 @[480px]:w-12">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</label>
+</div>
+</div>
+</div>
+</div>
+<section class="py-6">
+<h2 class="text-[#1c1c0d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-2">Top Recommended Colleges</h2>
+<div class="flex overflow-x-auto p-4 gap-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex w-64 flex-shrink-0 flex-col gap-3 rounded-2xl bg-white p-3 shadow-md transition-shadow hover:shadow-lg">
+<div class="h-40 w-full rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhIlbHArw50Oh_uzbSv9OJXYjQeD3Uk9L_ys9aaUUKV5OYk_J8Ay167OHwGmYlgy0CNuDypEp1sxOBRwU5_DBT-ZQdmGxMVCqguZB1q8QbDmllN04dJwR_16Ccg9UpqbHp7uFNFZIPLbzf7La9_kjCkdQZgzF3NoB2oaV9o33JGjpshjTwZXNzIE4ti1yo5rQv3PAhwi5Bm_TSW6vSHjehr1lzkzYHnBC6z-Xm1dr5rxBavfm-B3omc7OtddTZY5DEHTYD4a7M-BLx");'></div>
+<div>
+<h3 class="font-bold text-gray-800">University of Excellence</h3>
+<p class="text-sm text-gray-500">Top-ranked university known for its academic rigor.</p>
+</div>
+</div>
+<div class="flex w-64 flex-shrink-0 flex-col gap-3 rounded-2xl bg-white p-3 shadow-md transition-shadow hover:shadow-lg">
+<div class="h-40 w-full rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA36SzulaaN778RkQWIV3H0WXuMrNRTjQ3wPZhja-WYfxGpyEmWBdNxOLh3ODOcW1RDmSJJBkP8NYN3niFmN2_cGPOXH1sR3iPA2BXqXFzcIGUGJkozngTyUm_WA_5vknvz2OeLBZty0MF-Ax6ooxiY1Gg-i7FjBcQ7rYSOmrudwwxeSxp8jBKpMDla-bpHRQvj9WVdRQb1zFld0rpyuiwJG70egZje1HSaZnQgpIHFDC_uoMbVhJXtZzZYu2hYvXE6nDz5iYL7G9P");'></div>
+<div>
+<h3 class="font-bold text-gray-800">Tech Innovators Institute</h3>
+<p class="text-sm text-gray-500">Leading the way in technology and innovation.</p>
+</div>
+</div>
+<div class="flex w-64 flex-shrink-0 flex-col gap-3 rounded-2xl bg-white p-3 shadow-md transition-shadow hover:shadow-lg">
+<div class="h-40 w-full rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn1x_P09Hij2TJ7v8SkW5oV0y5HMaIST9ZFxLClI8hDt4VKI4QZi3GM69JVuNXTQcj0tHQifHDnBEQeuTIoqiKfS08zd3t7ts7n8nv2tEmsTpwrHl16jdD0q0ZvnmXIxjZNN5v3Et5uaEnsT9I9c99lC6AfzwuHnvT6IToqRk1Kw-IsJWMa-l1FoIX8zSzoIFClZPHX27OydJJfQq5pj3VowReFcCLO0TSFPBUStW7EBw_YpZuKUSK05SvLCIZIm5ZSKq9BhBL0M8c");'></div>
+<div>
+<h3 class="font-bold text-gray-800">Global Leaders Academy</h3>
+<p class="text-sm text-gray-500">Developing global leaders with a focus on diplomacy.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-4 py-4">
+<div class="grid grid-cols-2 gap-4">
+<button class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-primary-200 p-4 text-center font-bold text-[#1c1c0d] shadow-md transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-3xl">search</span>
+<span class="text-sm">Find Colleges</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 rounded-2xl bg-green-100 p-4 text-center font-bold text-green-800 shadow-md transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+<span class="text-sm">AI Advisor</span>
+</button>
+</div>
+<button class="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-100 p-4 text-center font-bold text-blue-800 shadow-md transition-transform hover:scale-105">
+<span class="material-symbols-outlined text-3xl">near_me</span>
+<span class="text-sm">Nearby Colleges</span>
+</button>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-white shadow-[0_-2px_5px_rgba(0,0,0,0.05)]">
+<nav class="flex justify-around py-2">
+<a class="flex flex-col items-center gap-1 text-primary-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary-500" href="#">
+<span class="material-symbols-outlined">school</span>
+<p class="text-xs font-medium">Colleges</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary-500" href="#">
+<span class="material-symbols-outlined">place</span>
+<p class="text-xs font-medium">Nearby</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary-500" href="#">
+<span class="material-symbols-outlined">smart_toy</span>
+<p class="text-xs font-medium">AI Advisor</p>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 hover:text-primary-500" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-xs font-medium">Dashboard</p>
+</a>
+</nav>
+<div class="h-safe-area-inset-bottom bg-white"></div>
+</footer>
+</div>
+
+</body></html>

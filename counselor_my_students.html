@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>counselor_my_students</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-50: #eff6ff;
+      --primary-100: #dbeafe;
+      --primary-200: #bfdbfe;
+      --primary-300: #93c5fd;
+      --primary-400: #60a5fa;
+      --primary-500: #3b82f6;
+      --primary-600: #2563eb;
+      --primary-700: #1d4ed8;
+      --primary-800: #1e40af;
+      --primary-900: #1e3a8a;
+      --primary-950: #172554;
+      --secondary-50: #f8fafc;
+      --secondary-100: #f1f5f9;
+      --secondary-200: #e2e8f0;
+      --secondary-300: #cbd5e1;
+      --secondary-400: #94a3b8;
+      --secondary-500: #64748b;
+      --secondary-600: #475569;
+      --secondary-700: #334155;
+      --secondary-800: #1e293b;
+      --secondary-900: #0f172a;
+      --secondary-950: #020617;
+    }
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-secondary-50">
+<div class="relative min-h-screen">
+<header class="sticky top-0 z-10 bg-secondary-50/80 backdrop-blur-sm border-b border-secondary-200">
+<div class="flex items-center p-4">
+<button class="p-2 -ml-2">
+<span class="material-symbols-outlined text-secondary-900">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-secondary-900 text-center flex-1">My Students</h1>
+<div class="w-8"></div>
+</div>
+<div class="px-4 pb-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary-500">search</span>
+<input class="w-full rounded-full border-secondary-300 bg-secondary-100 pl-10 pr-4 py-2.5 text-secondary-800 placeholder-secondary-500 focus:ring-2 focus:ring-primary-500 focus:border-primary-500" placeholder="Search students..." type="text"/>
+</div>
+</div>
+</header>
+<main class="p-4 space-y-4 pb-28">
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Ethan Harper" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ngMGe8HHRRXgGIt5yR8NF9iiq2n7Z9-ogJ2eBHPwfrddqrag8x9ca5X-VVlUb0PU7SjMJlIzj0zjJPZvYlRDeoPGLgXzuhfZ-a3powXhJ_eI7rkVhyWatpw4q391R0sBzYbDenqtWVsgljqUYPA7bPIrQkEhWIwfMrYukYWZ0wV2vUZn2-bMV2FVXhr6DRl_km_Iy6siNKXqZi62uVr1o02jazEGbZ4INIlFftt2vBhEFPCLHIrmeIu7RpCHcWB8ZRS8BzrhnnoA"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Ethan Harper</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Olivia Bennett" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANAoeV4Vxjhzq22cA6HbMb40QZau1PaOaQyym0mq3b27TZTTIjIwx-4LSS-EYosBD41j6Jhscz0wFm2KWc2yiEyPpDvGIvnpcWNK1ypfDnJTX7Cz2PBkwj31Aw50yqiv7Yn8NraJYQn5QUG-f4Dc99L4kMLod_ksrkFrxhTzWL-94GCO0i526Vl0yfD0buqrbsxw6N_fbu7XLRrimT2j4I5R2g_XTuZgEbSMIzERFtEfq7SeO5rzZKYNgE_A9V-W6giFiuXmGe7G26"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Olivia Bennett</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Noah Carter" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg5s8sgcr6Ssi5WxVoCHZGS9bg2gXp-9PXPaHnKFvWCfq_Jx2jQr05bVbQPgzpA83zTiNcYgR9MWztpQpDShYbQANU0uFc-5_eF78Pdxd5Zc3mkVnt1V7h8mW4KvNT0qWjpsDbdQRwNZka7Ar60l6s9f64O5sMUUgvTTzLl4eri62vmEbUVMshZRSSAMD3xOtb41oQdYE1Fl-JfEkrlxgjbR0wm26EToDoQa_Jd0xUpuyQXc_CcHtNEDb-kYcNcodrA1JB5YBKn0Lb"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Noah Carter</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Ava Mitchell" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaw-G5ldMbob_mCMz9kHQuoHJngGEuUA4IO8jjvbH1FLHfApBaOCKnipEub9_1UskNKKgpRUEC3UcSVIyiDjItrX1i3COSdaRmFQw8vEi-frbtbWeWPXPSUh-OvabITQAtFo1T5dvek_XX8c5-yQy7UEuujhqcIZ7x1d5zJhz9cGrXPwag_bkgKlF-lDmvGV34Ymu_xa-K0VB8A5zd9SSSJGxJhLXSfwwcBjzqR7oyJku0ce3npWmWolBCy6OhLl-vb24gkO2kj1gM"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Ava Mitchell</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Liam Foster" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-8IEYkhbF9wANYAnPwrM1_2ECFUvS79QCFFXY3asLCt6_e7Wp9lialK1sPyRFiqS-YGJd89OUQUyhQRCj1TeuP5ks2wAY3fAzbMYEmU91xYOn0gXG1dv63hWtrqmbl8jclDBgYwEfPW-FvSq2ryJCpw8r28BKub4RSh9E5dsDHbhzlZQOkcigduJE07_9GYCV053Uoxfdw_yTeJiKGRJNdAJX-Hob6L5DvaE6_G2lMAEotR-rlbBVl5Uo4mnzWWodlrWNB_r-H_TK"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Liam Foster</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+<a class="block bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300" href="#">
+<div class="flex items-center gap-4">
+<img alt="Isabella Reed" class="h-14 w-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFb3r21q8ypLB8vsSMUtD5eEEe6hV9XFT21-k45nfSFNfFlnvTblMOJ38SpWH7ntEEpfD2CuSLq6jaPkFQ4rsA68JilWJZZkB18NOjhf1GymIZuxuNIQwKInkIIwFrQSQdya-qGR0P7bDzxe0cpKnInzAhcvh3Q1Lqvf-i-uB9vz2fLg5iffbMHyX6Oz4CWYvbDnhNgG0VY3YO39njBTt6OFYQjwzOkthuDCSe_CfY_h9i_zoBHskW5xZFZBZwDudqm5UbkYkGFq18"/>
+<div class="flex-1">
+<p class="text-lg font-semibold text-secondary-900">Isabella Reed</p>
+<p class="text-sm text-secondary-500">Class of 2024</p>
+</div>
+<span class="material-symbols-outlined text-secondary-400">chevron_right</span>
+</div>
+</a>
+</main>
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-secondary-200">
+<div class="flex justify-around max-w-md mx-auto">
+<a class="flex flex-col items-center justify-center gap-1 py-3 px-2 text-secondary-500 hover:text-primary-500 transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined !text-2xl">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 py-3 px-2 text-primary-500 hover:text-primary-600 transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined !text-2xl">group</span>
+<span class="text-xs font-bold">Students</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 py-3 px-2 text-secondary-500 hover:text-primary-500 transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined !text-2xl">description</span>
+<span class="text-xs font-medium">Resources</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 py-3 px-2 text-secondary-500 hover:text-primary-500 transition-colors w-1/4" href="#">
+<span class="material-symbols-outlined !text-2xl">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+
+</body></html>

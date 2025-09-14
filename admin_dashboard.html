@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Admin Dashboard - Career Saarthi</title>
+<link href="https://cdn.tailwindcss.com?plugins=forms,container-queries" rel="stylesheet"/>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-50: #f0f9ff;
+            --primary-100: #e0f2fe;
+            --primary-200: #bae6fd;
+            --primary-300: #7dd3fc;
+            --primary-400: #38bdf8;
+            --primary-500: #0ea5e9;
+            --primary-600: #0284c7;
+            --primary-700: #0369a1;
+            --primary-800: #075985;
+            --primary-900: #0c4a6e;
+            --secondary-color: #e7f6fe;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --background-color: #f8fafc;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .active-link {
+            color: var(--primary-600) !important;
+        }
+        .h-safe-area-bottom {
+            height: env(safe-area-inset-bottom, 0);
+        }
+    </style>
+  </head>
+<body class="bg-gray-50 min-h-screen flex flex-col" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
+
+<!-- Mobile Sidebar Menu -->
+<aside id="mobile-menu" class="mobile-menu fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
+    <div class="p-4 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-gray-800">Admin Menu</h2>
+        <button id="close-menu" class="absolute right-4 top-4 text-gray-500 hover:text-gray-700">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <nav class="p-4 space-y-2">
+        <a href="admin_dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100 active-link">
+            <span class="material-symbols-outlined align-middle mr-2">bar_chart</span>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin_student_management.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">school</span>
+            <span>Students</span>
+        </a>
+        <a href="admin_counselor_management.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">support_agent</span>
+            <span>Counselors</span>
+        </a>
+        <a href="admin_college_management.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">apartment</span>
+            <span>Colleges</span>
+        </a>
+        <a href="admin_scholarship_management.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">savings</span>
+            <span>Scholarships</span>
+        </a>
+        <a href="admin_reports.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">assessment</span>
+            <span>Reports</span>
+        </a>
+        <a href="admin_settings.html" class="block px-4 py-2 rounded-lg hover:bg-gray-100">
+            <span class="material-symbols-outlined align-middle mr-2">settings</span>
+            <span>Settings</span>
+        </a>
+    </nav>
+</aside>
+
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-white/90 backdrop-blur-sm border-b border-gray-200">
+    <div class="flex items-center justify-between p-4">
+        <div class="flex items-center">
+            <button id="mobile-menu-button" class="p-2 -ml-2 md:hidden">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            <h1 class="ml-2 text-lg font-bold text-gray-900 md:text-xl">Admin Dashboard</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="dark-mode-toggle" class="p-2 text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
+                <span class="material-symbols-outlined">dark_mode</span>
+            </button>
+            <div class="relative">
+                <button onclick="toggleDropdown('user-menu')" class="flex items-center space-x-2 focus:outline-none">
+                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                        <span class="text-blue-600 font-medium">A</span>
+                    </div>
+                    <span class="hidden md:inline text-sm font-medium">Admin</span>
+                    <span class="material-symbols-outlined text-sm">expand_more</span>
+                </button>
+                <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100" id="logoutBtn">Sign out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="p-4 md:p-6">
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <!-- Total Users -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium">Total Users</p>
+                        <h3 class="text-2xl font-bold mt-1">12,345</h3>
+                        <p class="text-green-600 text-xs mt-2">
+                            <span class="inline-flex items-center">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                <span>12% from last month</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-full bg-blue-50 text-blue-600">
+                        <span class="material-symbols-outlined">people</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Users -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium">Active Today</p>
+                        <h3 class="text-2xl font-bold mt-1">1,234</h3>
+                        <p class="text-green-600 text-xs mt-2">
+                            <span class="inline-flex items-center">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                <span>8% from yesterday</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-full bg-green-50 text-green-600">
+                        <span class="material-symbols-outlined">active_users</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Signups -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium">New Signups</p>
+                        <h3 class="text-2xl font-bold mt-1">245</h3>
+                        <p class="text-green-600 text-xs mt-2">
+                            <span class="inline-flex items-center">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                <span>15% from last week</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-full bg-purple-50 text-purple-600">
+                        <span class="material-symbols-outlined">person_add</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Counselors -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm font-medium">Active Counselors</p>
+                        <h3 class="text-2xl font-bold mt-1">87</h3>
+                        <p class="text-green-600 text-xs mt-2">
+                            <span class="inline-flex items-center">
+                                <span class="material-symbols-outlined text-sm">trending_up</span>
+                                <span>5% from last month</span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="p-3 rounded-full bg-amber-50 text-amber-600">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <!-- User Activity Chart -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">User Activity</h2>
+                    <div class="relative">
+                        <button onclick="toggleDropdown('time-range')" class="flex items-center text-sm text-gray-600 hover:text-gray-900">
+                            <span>This Week</span>
+                            <span class="material-symbols-outlined text-base ml-1">expand_more</span>
+                        </button>
+                        <div id="time-range" class="hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 z-10">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Today</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">This Week</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">This Month</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">This Year</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-64">
+                    <canvas id="daily-users-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- User Distribution -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <h2 class="text-lg font-semibold mb-4">User Distribution</h2>
+                <div class="h-64">
+                    <canvas id="engagement-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity & Top Performers -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <!-- Recent Activity -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">Recent Activity</h2>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">View All</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recent-activities" class="bg-white divide-y divide-gray-200">
+                            <!-- Filled by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Top Performers -->
+            <div class="bg-white rounded-xl shadow-sm p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-semibold">Top Performing Counselors</h2>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">View All</a>
+                </div>
+                <div class="space-y-4">
+                    <!-- Counselor 1 -->
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <span class="text-blue-600 font-medium">JD</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-medium">John Doe</h4>
+                            <p class="text-sm text-gray-500">Career Counselor</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-medium">4.9</div>
+                            <div class="flex items-center text-yellow-400">
+                                <span class="material-symbols-outlined text-sm">star</span>
+                                <span class="material-symbols-outlined text-sm">star</span>
+                                <span class="material-symbols-outlined text-sm">star</span>
+                                <span class="material-symbols-outlined text-sm">star</span>
+                                <span class="material-symbols-outlined text-sm">star_half</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more counselors as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+<section class="mb-8">
+<h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-tight mb-4">Overall System Performance</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-white shadow-sm">
+<p class="text-gray-600 text-base font-medium">Total Users</p>
+<p class="text-gray-900 text-3xl font-bold">12,345</p>
+<div class="flex items-center text-green-600 text-base font-medium">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>10%</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-white shadow-sm">
+<p class="text-gray-600 text-base font-medium">Active Users</p>
+<p class="text-gray-900 text-3xl font-bold">8,765</p>
+<div class="flex items-center text-green-600 text-base font-medium">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>5%</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl p-6 bg-white shadow-sm">
+<p class="text-gray-600 text-base font-medium">New Users</p>
+<p class="text-gray-900 text-3xl font-bold">1,234</p>
+<div class="flex items-center text-green-600 text-base font-medium">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>20%</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-8">
+<h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-tight mb-4">User Activity</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-gray-600 text-base font-medium">Daily Active Users</p>
+<p class="text-gray-900 text-4xl font-bold">7,500</p>
+</div>
+<div class="flex items-center text-green-600 text-base font-medium">
+<span class="material-symbols-outlined text-lg"> arrow_upward </span>
+<span>5%</span>
+<span class="text-gray-500 ml-2">vs last 7 days</span>
+</div>
+</div>
+<div class="h-48">
+    <canvas id="daily-users-chart"></canvas>
+</div>
+<div class="flex justify-around text-xs font-bold text-gray-500">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm">
+<div>
+<p class="text-gray-600 text-base font-medium">User Engagement</p>
+<p class="text-gray-900 text-4xl font-bold">60%</p>
+</div>
+<div class="h-48 mt-4">
+    <canvas id="engagement-chart"></canvas>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-gray-900 text-2xl font-bold leading-tight tracking-tight mb-4">Platform Usage</h2>
+<div class="rounded-2xl bg-white p-6 shadow-sm">
+<p class="text-gray-600 text-base font-medium mb-4">Top Features Used</p>
+<div class="space-y-4">
+    <div class="space-y-1">
+        <div class="flex justify-between">
+            <p class="text-sm font-medium text-gray-700">College Search</p>
+            <span class="text-sm text-gray-500">85%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+        </div>
+    </div>
+    <div class="space-y-1">
+        <div class="flex justify-between">
+            <p class="text-sm font-medium text-gray-700">Career Assessments</p>
+            <span class="text-sm text-gray-500">70%</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+        </div>
+    </div>
+<div class="space-y-1">
+<p class="text-sm font-medium text-gray-700">Guidance Resources</p>
+<div class="w-full bg-primary-100 rounded-full h-2.5">
+<div class="bg-primary-500 h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-medium text-gray-700">Profile Management</p>
+<div class="w-full bg-primary-100 rounded-full h-2.5">
+<div class="bg-primary-500 h-2.5 rounded-full" style="width: 35%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 border-t border-gray-200 bg-white/90 backdrop-blur-sm">
+    <nav class="flex justify-around p-2">
+        <a href="admin_dashboard.html" class="flex flex-col items-center justify-end gap-1 text-primary-600 nav-link" data-page="dashboard">
+            <span class="material-symbols-outlined">bar_chart</span>
+            <p class="text-xs font-medium">Dashboard</p>
+        </a>
+        <a href="admin_student_management.html" class="flex flex-col items-center justify-end gap-1 text-gray-500 nav-link" data-page="students">
+            <span class="material-symbols-outlined">school</span>
+            <p class="text-xs font-medium">Students</p>
+        </a>
+        <a href="admin_counselor_management.html" class="flex flex-col items-center justify-end gap-1 text-gray-500 nav-link" data-page="counselors">
+            <span class="material-symbols-outlined">support_agent</span>
+            <p class="text-xs font-medium">Counselors</p>
+        </a>
+        <a href="admin_college_management.html" class="flex flex-col items-center justify-end gap-1 text-gray-500 nav-link" data-page="colleges">
+            <span class="material-symbols-outlined">apartment</span>
+            <p class="text-xs font-medium">Colleges</p>
+        </a>
+    </nav>
+    <div class="h-safe-area-bottom"></div>
+</footer>
+
+<!-- SPA Navigation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuOverlay.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        if (mobileMenuButton) mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        if (closeMenuButton) closeMenuButton.addEventListener('click', toggleMobileMenu);
+        if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+        // SPA Navigation
+        const mainContent = document.getElementById('main-content');
+        const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+        let isLoading = false;
+
+        async function loadPage(url, pushState = true) {
+            if (isLoading) return;
+            
+            try {
+                isLoading = true;
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Page not found');
+                
+                const html = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                // Update main content
+                const newContent = doc.querySelector('#main-content').innerHTML;
+                mainContent.innerHTML = newContent;
+                
+                // Update page title
+                document.title = doc.title;
+                
+                // Update URL and history
+                if (pushState) {
+                    window.history.pushState({ url }, '', url);
+                }
+                
+                // Update active link
+                updateActiveLink(url);
+                
+                // Close mobile menu if open
+                if (mobileMenu && mobileMenu.classList.contains('open')) {
+                    toggleMobileMenu();
+                }
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+            } catch (error) {
+                console.error('Error loading page:', error);
+                // Fallback to traditional navigation
+                window.location.href = url;
+            } finally {
+                isLoading = false;
+            }
+        }
+
+        function updateActiveLink(url) {
+            // Remove active class from all links
+            document.querySelectorAll('.nav-link, #mobile-menu a').forEach(link => {
+                link.classList.remove('active-link', 'text-primary-600');
+                link.classList.add('text-gray-500');
+                
+                // Reset font weight for all links
+                const textElement = link.querySelector('p');
+                if (textElement) {
+                    textElement.classList.remove('font-bold');
+                    textElement.classList.add('font-medium');
+                }
+            });
+            
+            // Add active class to current page link
+            const currentPage = url.split('/').pop() || 'admin_dashboard.html';
+            document.querySelectorAll(`a[href*="${currentPage}"]`).forEach(link => {
+                link.classList.add('active-link', 'text-primary-600');
+                link.classList.remove('text-gray-500');
+                
+                // Make the text bold for active link
+                const textElement = link.querySelector('p');
+                if (textElement) {
+                    textElement.classList.remove('font-medium');
+                    textElement.classList.add('font-bold');
+                }
+            });
+        }
+
+        // Handle navigation link clicks
+        function handleNavigation(e) {
+            const link = e.currentTarget;
+            const url = link.getAttribute('href');
+            
+            // Skip if it's an external link or anchor link
+            if (url.startsWith('http') || url.startsWith('#')) return;
+            
+            e.preventDefault();
+            loadPage(url);
+        }
+
+        // Add click event listeners to all navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', handleNavigation);
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            if (e.state && e.state.url) {
+                loadPage(e.state.url, false);
+            }
+        });
+
+        // Initialize active link
+        updateActiveLink(window.location.pathname);
+    });
+</script>
+</div>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Admin JavaScript -->
+    <script src="js/admin.js"></script>
+</body>
+</html>

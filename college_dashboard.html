@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>college_dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #13a4ec;
+        --secondary-color: #4c809a;
+        --text-color: #0d171b;
+        --bg-color: #f8fafc;
+        --border-color: #e2e8f0;
+      }
+      .positive-change {
+        color: #22c55e;
+      }
+      .negative-change {
+        color: #ef4444;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[var(--bg-color)]" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-[var(--bg-color)]/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="text-[var(--text-color)]">
+<span class="material-symbols-outlined"> arrow_back </span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-[var(--text-color)]">College Dashboard</h1>
+<div class="w-8"></div>
+</div>
+</header>
+<main class="flex-1">
+<div class="p-6 text-center">
+<img alt="University of Midwest logo" class="mx-auto size-28 rounded-full object-cover shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwTAdjo4KOFkChVjQ3FOL7ClkN5VQe4LOMdbAm2UVKHiY6-Xw5LJ-FKwYg93gs2CwM0Wcjw6oBlhGwmP4ooct8ZbojOolM721wS0R_GfU9wHnzQL_hnYDKxDfDqh5hL8kvnYM5SAn-DkBruFVAs5n0P1LhdQtLhwW9Hnbycs7Ko-T8RcZy7IvvtN76l-FhZ0uMmiBBeftrGGYmks2jjfDklt3rPeM4cJoHowPNO7On_yV7nOWpvG6M2uFXzY7Y6Z0S_6w459GgYhY0"/>
+<h2 class="mt-4 text-2xl font-bold text-[var(--text-color)]">University of Midwest</h2>
+<p class="text-[var(--secondary-color)]">Midwest City, USA</p>
+<p class="text-sm text-gray-500">Established 1950</p>
+</div>
+<nav class="border-b border-[var(--border-color)]">
+<div class="flex justify-around">
+<a class="flex-1 border-b-2 border-[var(--primary-color)] py-3 text-center text-sm font-semibold text-[var(--primary-color)]" href="#">Overview</a>
+<a class="flex-1 border-b-2 border-transparent py-3 text-center text-sm font-medium text-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="#">Admissions</a>
+<a class="flex-1 border-b-2 border-transparent py-3 text-center text-sm font-medium text-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="#">Analytics</a>
+</div>
+</nav>
+<section class="p-4">
+<h3 class="text-lg font-bold text-[var(--text-color)]">Key Metrics</h3>
+<div class="mt-4 grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<p class="text-sm text-[var(--secondary-color)]">Student Engagement</p>
+<p class="text-3xl font-bold text-[var(--text-color)]">85%</p>
+<p class="text-sm font-medium positive-change flex items-center"><span class="material-symbols-outlined text-base">arrow_upward</span>+5%</p>
+</div>
+<div class="flex flex-col gap-1 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<p class="text-sm text-[var(--secondary-color)]">Application Rate</p>
+<p class="text-3xl font-bold text-[var(--text-color)]">72%</p>
+<p class="text-sm font-medium positive-change flex items-center"><span class="material-symbols-outlined text-base">arrow_upward</span>+3%</p>
+</div>
+<div class="col-span-2 flex flex-col gap-1 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<p class="text-sm text-[var(--secondary-color)]">Accepted Offers</p>
+<p class="text-3xl font-bold text-[var(--text-color)]">45%</p>
+<p class="text-sm font-medium negative-change flex items-center"><span class="material-symbols-outlined text-base">arrow_downward</span>-2%</p>
+</div>
+</div>
+</section>
+<section class="p-4">
+<h3 class="mb-4 text-lg font-bold text-[var(--text-color)]">Popular Courses</h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-[var(--secondary-color)]">Engineering</p>
+<p class="text-base font-bold text-[var(--text-color)]">Mechanical Engineering</p>
+<p class="mt-1 text-sm text-[var(--secondary-color)]">Explore principles of mechanics, materials, and energy.</p>
+</div>
+<img alt="Mechanical Engineering" class="size-20 flex-shrink-0 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2kBCrf8c2KREZnLf-nYTxl03kBT5HyE0K8ov011gNvrt63FYR0d47tY26XdTiYAaURow5o94DRL24J2Nk-WHEN7s0cuUFzAN4FxTlsWw_OAkjUHz7aXNGMkO-ZKVYEpYKKI-vpr53_tRCRqo-KUENj0YZaxLbLrnfo6vOyDobSL855r3GWFSjBTMUyZekub-Y8gCcx1GDR8Kq1aNVIXeVQLS9iKhSaSQjks-fUrIdr3FPURKTG5oLpQbL-90kKbnR1-NDnjS-tT8d"/>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-[var(--secondary-color)]">Business</p>
+<p class="text-base font-bold text-[var(--text-color)]">Business Administration</p>
+<p class="mt-1 text-sm text-[var(--secondary-color)]">Learn fundamentals of management, marketing, and finance.</p>
+</div>
+<img alt="Business Administration" class="size-20 flex-shrink-0 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM65WLWiWAPngZiqoik87H7eOs3Dkva7VmgnQerlx2J3YVw3q25C0rj4F4WL0mF-OgctcBqhSx2bXDN7S6s6V2DFHvaRWY89nPaX53lSGZ7j03saxQ6R21dFV4hegXHJHzfSHg4mNRRCdRndnWENYXJ7_8FEB_wSDpdqbxlZUzTnzMyxC6AewhHK9HjZHxRiwt8BJ1A6NDCqiiCi-tfBkuQlBue7_177iAqoZq1d0S1cJZmV0ZgKDFbLPIW4qOlCwe6QGCRftwJ12_"/>
+</div>
+<div class="flex items-center gap-4 rounded-lg border border-[var(--border-color)] bg-white p-4 shadow-sm">
+<div class="flex-1">
+<p class="text-xs font-semibold uppercase tracking-wider text-[var(--secondary-color)]">Arts &amp; Sciences</p>
+<p class="text-base font-bold text-[var(--text-color)]">Psychology</p>
+<p class="mt-1 text-sm text-[var(--secondary-color)]">Study the human mind and behavior through research.</p>
+</div>
+<img alt="Psychology" class="size-20 flex-shrink-0 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxUdKsfqta-DQffXD9vDNNkr36HexAC4VFDRhfFR4a0NoVRAHfcK9aFE2IMZMyg8mZ5Iq_S295I0wfR53XzEtHkF2JVDSF1xiYGu9sq2zyq56xkga3TjgAlPcbUBbp2VWKn5XsAw0HWCt7T_i1qQm3pwOETCmaNubPNs4lC6_7K2paxqUe8f5peOYpEOMae2-k-9UThrsiGCOEsEKY5S3UW-ddepceS9YwNHGNfCvE09BAS7g8YqmHaP6fT5cCvWwGeBLbNCBZbkck"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="sticky bottom-0 z-10 border-t border-[var(--border-color)] bg-[var(--bg-color)]/80 pb-3 pt-2 backdrop-blur-sm">
+<nav class="flex justify-around">
+<a class="flex flex-1 flex-col items-center gap-1 text-[var(--primary-color)]" href="#">
+<span class="material-symbols-outlined"> home </span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="#">
+<span class="material-symbols-outlined"> school </span>
+<p class="text-xs font-medium">Students</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="#">
+<span class="material-symbols-outlined"> description </span>
+<p class="text-xs font-medium">Applications</p>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-[var(--secondary-color)] hover:text-[var(--primary-color)]" href="#">
+<span class="material-symbols-outlined"> person </span>
+<p class="text-xs font-medium">Profile</p>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>
